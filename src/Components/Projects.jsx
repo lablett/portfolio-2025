@@ -12,21 +12,21 @@ const Projects = () => {
       company: 'Company Name',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Built scalable solutions that impacted thousands of users.',
       techStack: ['React', 'TypeScript', 'Python', 'Docker'],
-      gradient: 'from-energy-orange to-sunshine-yellow',
+      gradient: 'from-hot-pink to-gold',
     },
     {
       title: 'Project Two',
       company: 'Company Name',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Developed innovative features that improved user engagement and system performance.',
       techStack: ['React Native', 'Ruby', 'Git'],
-      gradient: 'from-electric-purple to-neon-pink',
+      gradient: 'from-purple to-hot-pink',
     },
     {
       title: 'Project Three',
       company: 'Company Name',
       description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Created robust architectures and implemented best practices across the codebase.',
       techStack: ['React', 'Python', 'CSS', 'HTML'],
-      gradient: 'from-cyber-aqua to-spring-green',
+      gradient: 'from-gold to-neon-green',
     },
   ]
 
@@ -58,8 +58,8 @@ const Projects = () => {
       className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-energy-orange/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-spring-green/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-hot-pink/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl w-full relative z-10">
         <motion.div
@@ -70,7 +70,7 @@ const Projects = () => {
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
             My{' '}
-            <span className="bg-linear-to-r from-neon-pink via-electric-purple to-cyber-aqua bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-hot-pink via-purple to-gold bg-clip-text text-transparent">
               Work
             </span>
           </h2>
@@ -124,7 +124,7 @@ const Projects = () => {
                       {project.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="px-4 py-2 bg-light-text/5 border border-light-text/20 rounded-full text-sm font-medium text-light-text/90 hover:bg-light-text/10 hover:border-energy-orange/50 transition-all duration-300"
+                          className="px-4 py-2 bg-light-text/5 border border-light-text/20 rounded-full text-sm font-medium text-light-text/90 hover:bg-light-text/10 hover:border-hot-pink/50 transition-all duration-300"
                         >
                           {tech}
                         </span>

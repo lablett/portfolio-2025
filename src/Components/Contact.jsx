@@ -14,36 +14,36 @@ const Contact = () => {
       name: 'GitHub',
       icon: faGithub,
       url: 'https://github.com/yourusername',
-      color: 'hover:text-spring-green',
-      bgColor: 'group-hover:border-spring-green',
+      color: 'hover:text-neon-green',
+      bgColor: 'group-hover:border-neon-green',
     },
     {
       name: 'LinkedIn',
       icon: faLinkedin,
       url: 'https://linkedin.com/in/yourusername',
-      color: 'hover:text-cyber-aqua',
-      bgColor: 'group-hover:border-cyber-aqua',
+      color: 'hover:text-purple',
+      bgColor: 'group-hover:border-purple',
     },
     {
       name: 'Email',
       icon: faEnvelope,
       url: 'mailto:your.email@example.com',
-      color: 'hover:text-energy-orange',
-      bgColor: 'group-hover:border-energy-orange',
+      color: 'hover:text-gold',
+      bgColor: 'group-hover:border-gold',
     },
     {
       name: 'Twitter',
       icon: faTwitter,
       url: 'https://twitter.com/yourusername',
-      color: 'hover:text-neon-pink',
-      bgColor: 'group-hover:border-neon-pink',
+      color: 'hover:text-hot-pink',
+      bgColor: 'group-hover:border-hot-pink',
     },
     {
       name: 'Instagram',
       icon: faInstagram,
       url: 'https://instagram.com/yourusername',
-      color: 'hover:text-sunshine-yellow',
-      bgColor: 'group-hover:border-sunshine-yellow',
+      color: 'hover:text-gold',
+      bgColor: 'group-hover:border-gold',
     },
   ]
 
@@ -77,8 +77,8 @@ const Contact = () => {
       className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-1/3 right-20 w-96 h-96 bg-neon-pink/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/3 left-20 w-80 h-80 bg-cyber-aqua/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/3 right-20 w-96 h-96 bg-hot-pink/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/3 left-20 w-80 h-80 bg-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
 
       <div className="max-w-4xl w-full relative z-10 text-center">
         <motion.div
@@ -88,7 +88,7 @@ const Contact = () => {
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             Let's{' '}
-            <span className="bg-linear-to-r from-energy-orange via-neon-pink to-electric-purple bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-hot-pink via-purple to-gold bg-clip-text text-transparent">
               Connect
             </span>
           </h2>
@@ -116,7 +116,7 @@ const Contact = () => {
               whileTap={{ scale: 0.95 }}
               className="group relative"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-energy-orange/20 to-electric-purple/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-linear-to-br from-hot-pink/20 to-purple/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
 
               <div className={`relative bg-dark-card border-2 border-light-text/10 ${social.bgColor} rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl`}>
                 <FontAwesomeIcon
@@ -140,10 +140,10 @@ const Contact = () => {
           <a
             href="/path-to-your-cv.pdf"
             download
-            className="group inline-block relative px-8 py-4 text-lg font-semibold bg-linear-to-r from-spring-green to-cyber-aqua rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-spring-green/50"
+            className="group inline-block relative px-8 py-4 text-lg font-semibold bg-linear-to-r from-hot-pink to-purple rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/50"
           >
             <span className="relative z-10">Download CV</span>
-            <div className="absolute inset-0 bg-linear-to-r from-sunshine-yellow to-energy-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-linear-to-r from-gold to-neon-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
         </motion.div>
 

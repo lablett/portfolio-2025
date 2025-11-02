@@ -9,49 +9,104 @@ const Hero = () => {
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(118, 255, 163, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 40% 40%, rgba(254, 200, 77, 0.3) 0%, transparent 50%),
+          #1a1a1a
+        `
+      }}
     >
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-linear-to-br from-energy-orange/20 via-electric-purple/20 to-spring-green/20 animate-gradient-shift bg-size-[400%_400%]" />
+      {/* Scanning line effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute left-0 right-0 h-0.5 bg-light-text/10"
+          style={{ animation: 'scan 4s linear infinite' }}
+        />
+      </div>
 
-      {/* Floating orbs */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-sunshine-yellow/30 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-electric-purple/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyber-aqua/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      {/* Grid overlay for depth */}
+      <div
+        className="absolute inset-0 opacity-100 pointer-events-none"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px),
+            repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px)
+          `
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-6xl md:text-8xl font-bold mb-6">
-            Hi, my name is{' '}
-            <span className="bg-linear-to-r from-energy-orange via-sunshine-yellow to-electric-purple bg-clip-text text-transparent">
-              Lucille
-            </span>
+          <h1
+            className="font-black uppercase"
+            style={{
+              fontSize: 'clamp(3rem, 12vw, 7rem)',
+              lineHeight: '0.9',
+              letterSpacing: '-0.05em',
+              marginBottom: '1rem',
+              background: 'linear-gradient(135deg, #FF6B9D, #FEC84D, #76FFA3, #FF6B9D)',
+              backgroundSize: '200% 200%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              animation: 'gradient-shift 3s ease infinite',
+              textShadow: '0 0 60px rgba(255, 107, 157, 0.5)'
+            }}
+          >
+            Lucille Ablett
           </h1>
         </motion.div>
 
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-3xl md:text-5xl font-semibold mb-12 text-light-text/90"
+          className="font-black uppercase"
+          style={{
+            fontSize: '2rem',
+            letterSpacing: '0.1em',
+            marginBottom: '3rem',
+            color: '#76FFA3',
+            textShadow: '0 0 20px rgba(118, 255, 163, 0.5)'
+          }}
         >
-          I'm a Full-Stack Engineer
+          Full-Stack Engineer
         </motion.h2>
 
-        <motion.button
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          onClick={scrollToAbout}
-          className="group relative px-8 py-4 text-lg font-semibold bg-linear-to-r from-energy-orange to-electric-purple rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-purple/50"
         >
-          <span className="relative z-10">Find out more</span>
-          <div className="absolute inset-0 bg-linear-to-r from-sunshine-yellow to-spring-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </motion.button>
+          <button
+            onClick={scrollToAbout}
+            className="inline-block font-black uppercase border-4 transition-all duration-300 hover:scale-105"
+            style={{
+              padding: '1.5rem 4rem',
+              fontSize: '1.5rem',
+              letterSpacing: '0.1em',
+              background: 'linear-gradient(135deg, #FF6B9D, #FEC84D)',
+              color: '#1a1a1a',
+              borderColor: '#1a1a1a',
+              boxShadow: '0 0 40px rgba(255, 107, 157, 0.5)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 60px rgba(255, 107, 157, 0.8)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 40px rgba(255, 107, 157, 0.5)'
+            }}
+          >
+            About Me
+          </button>
+        </motion.div>
 
         {/* Scroll indicator */}
         <motion.div
@@ -60,11 +115,21 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1 }}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
-          <div className="w-6 h-10 border-2 border-energy-orange rounded-full flex justify-center pt-2">
+          <div
+            className="w-6 h-10 border-2 rounded-full flex justify-center pt-2"
+            style={{
+              borderColor: '#76FFA3',
+              boxShadow: '0 0 20px rgba(118, 255, 163, 0.4)'
+            }}
+          >
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-energy-orange rounded-full"
+              className="w-1.5 h-1.5 rounded-full"
+              style={{
+                backgroundColor: '#76FFA3',
+                boxShadow: '0 0 10px rgba(118, 255, 163, 0.8)'
+              }}
             />
           </div>
         </motion.div>

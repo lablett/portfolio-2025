@@ -1,21 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom colors */
-  --color-energy-orange: #FF6B35;
-  --color-sunshine-yellow: #FFD23F;
-  --color-electric-purple: #8B5CF6;
-  --color-spring-green: #00FF7F;
-  --color-cyber-aqua: #00FFFF;
-  --color-neon-pink: #FF10F0;
-  --color-dark-bg: #0A0A0A;
-  --color-dark-card: #1A1A1A;
-  --color-light-text: #F5F5F5;
+  /* Vibrant Rave Energy Palette */
+  --color-hot-pink: #FF6B9D;
+  --color-gold: #FEC84D;
+  --color-neon-green: #76FFA3;
+  --color-purple: #9D7CF5;
+  --color-dark-bg: #0A0614;
+  --color-dark-card: #1A1A2E;
+  --color-light-text: #FFFFFF;
 
   /* Custom animations */
   --animate-gradient-shift: gradient-shift 8s ease infinite;
   --animate-float: float 3s ease-in-out infinite;
   --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-scan: scan 3s linear infinite;
 }
 
 :root {
@@ -39,9 +38,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #0A0A0A;
-  color: #F5F5F5;
+  background-color: #0A0614;
+  color: #FFFFFF;
   overflow-x: hidden;
+  position: relative;
 }
 
 html {
@@ -58,12 +58,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #FF6B35, #8B5CF6);
+  background: linear-gradient(180deg, #FF6B9D, #9D7CF5);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #FFD23F, #00FF7F);
+  background: linear-gradient(180deg, #FEC84D, #76FFA3);
 }
 
 /* Party mode styles - will be toggled with JS */
@@ -95,9 +95,18 @@ body.party-mode * {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
   }
   50% {
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
+    box-shadow: 0 0 40px rgba(157, 124, 245, 0.8);
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
   }
 }

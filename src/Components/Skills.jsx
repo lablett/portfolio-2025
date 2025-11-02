@@ -10,15 +10,15 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const skills = [
-    { name: 'React', icon: faReact, color: 'text-cyber-aqua' },
-    { name: 'React Native', icon: faReact, color: 'text-neon-pink' },
-    { name: 'TypeScript', icon: faCode, color: 'text-energy-orange' },
-    { name: 'Python', icon: faPython, color: 'text-sunshine-yellow' },
-    { name: 'Ruby', icon: faCode, color: 'text-electric-purple' },
-    { name: 'Git', icon: faGitAlt, color: 'text-spring-green' },
-    { name: 'HTML', icon: faHtml5, color: 'text-energy-orange' },
-    { name: 'CSS', icon: faCss3Alt, color: 'text-cyber-aqua' },
-    { name: 'Docker', icon: faDocker, color: 'text-neon-pink' },
+    { name: 'React', icon: faReact, color: 'text-purple' },
+    { name: 'React Native', icon: faReact, color: 'text-hot-pink' },
+    { name: 'TypeScript', icon: faCode, color: 'text-gold' },
+    { name: 'Python', icon: faPython, color: 'text-neon-green' },
+    { name: 'Ruby', icon: faCode, color: 'text-hot-pink' },
+    { name: 'Git', icon: faGitAlt, color: 'text-neon-green' },
+    { name: 'HTML', icon: faHtml5, color: 'text-gold' },
+    { name: 'CSS', icon: faCss3Alt, color: 'text-purple' },
+    { name: 'Docker', icon: faDocker, color: 'text-neon-green' },
   ]
 
   const containerVariants = {
@@ -51,8 +51,8 @@ const Skills = () => {
       className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-1/4 left-10 w-72 h-72 bg-sunshine-yellow/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-electric-purple/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-purple/10 rounded-full blur-3xl" />
 
       <div className="max-w-6xl w-full relative z-10">
         <motion.div
@@ -63,7 +63,7 @@ const Skills = () => {
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
             My{' '}
-            <span className="bg-linear-to-r from-energy-orange via-sunshine-yellow to-spring-green bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-hot-pink via-gold to-purple bg-clip-text text-transparent">
               Tech Stack
             </span>
           </h2>
@@ -85,9 +85,9 @@ const Skills = () => {
               whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
               className="group relative"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-energy-orange/20 to-electric-purple/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-br from-hot-pink/20 to-purple/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
 
-              <div className="relative bg-dark-card border-2 border-light-text/10 group-hover:border-energy-orange/50 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:shadow-2xl hover:shadow-electric-purple/20">
+              <div className="relative bg-dark-card border-2 border-light-text/10 group-hover:border-hot-pink/50 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:shadow-2xl hover:shadow-purple/20">
                 <FontAwesomeIcon
                   icon={skill.icon}
                   className={`text-6xl ${skill.color} group-hover:animate-float transition-all duration-300`}
