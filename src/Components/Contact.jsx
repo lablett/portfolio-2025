@@ -4,6 +4,8 @@ import { useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import SectionTitle from './SectionTitle/SectionTitle'
+import './Contact.css'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -14,36 +16,16 @@ const Contact = () => {
       name: 'GitHub',
       icon: faGithub,
       url: 'https://github.com/yourusername',
-      color: 'hover:text-neon-green',
-      bgColor: 'group-hover:border-neon-green',
     },
     {
       name: 'LinkedIn',
       icon: faLinkedin,
       url: 'https://linkedin.com/in/yourusername',
-      color: 'hover:text-purple',
-      bgColor: 'group-hover:border-purple',
     },
     {
       name: 'Email',
       icon: faEnvelope,
       url: 'mailto:your.email@example.com',
-      color: 'hover:text-gold',
-      bgColor: 'group-hover:border-gold',
-    },
-    {
-      name: 'Twitter',
-      icon: faTwitter,
-      url: 'https://twitter.com/yourusername',
-      color: 'hover:text-hot-pink',
-      bgColor: 'group-hover:border-hot-pink',
-    },
-    {
-      name: 'Instagram',
-      icon: faInstagram,
-      url: 'https://instagram.com/yourusername',
-      color: 'hover:text-gold',
-      bgColor: 'group-hover:border-gold',
     },
   ]
 
@@ -86,16 +68,9 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            Let's{' '}
-            <span className="bg-gradient-to-r from-hot-pink via-purple to-gold bg-clip-text text-transparent">
-              Connect
-            </span>
-          </h2>
-          <p className="text-xl text-light-text/70 mb-16 max-w-2xl mx-auto">
-            I'm always open to new opportunities, collaborations, and conversations.
-            Feel free to reach out!
-          </p>
+          <SectionTitle color="green-purple">
+            Connect
+          </SectionTitle>
         </motion.div>
 
         {/* Social links */}
@@ -103,31 +78,31 @@ const Contact = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex flex-wrap justify-center gap-6 mb-16"
+          className="flex flex-wrap justify-center gap-32 mb-16"
         >
           {socials.map((social) => (
-            <motion.a
+            <motion.div
               key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
               variants={itemVariants}
-              whileHover={{ scale: 1.1, rotate: [0, -10, 10, 0] }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative"
             >
-              <div className="absolute inset-0 bg-linear-to-br from-hot-pink/20 to-purple/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
-
-              <div className={`relative bg-dark-card border-2 border-light-text/10 ${social.bgColor} rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl`}>
-                <FontAwesomeIcon
-                  icon={social.icon}
-                  className={`text-5xl text-light-text/70 ${social.color} transition-all duration-300`}
-                />
-                <div className="mt-3 text-sm font-semibold text-light-text/80 group-hover:text-light-text transition-colors">
-                  {social.name}
-                </div>
+              <div className="neon-hologram-wrapper">
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="neon-hologram-btn"
+                  title={social.name}
+                >
+                  <FontAwesomeIcon
+                    icon={social.icon}
+                    className="text-4xl"
+                  />
+                </a>
               </div>
-            </motion.a>
+              <div className="text-xs font-semibold text-light-text uppercase tracking-wider text-center mt-3">
+                {social.name}
+              </div>
+            </motion.div>
           ))}
         </motion.div>
 
