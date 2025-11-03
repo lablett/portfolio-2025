@@ -13,6 +13,13 @@
   padding: 0;
 }
 
+.text {
+  font-size: 1.35rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
 .border-pink {
   border-color: #FF6B9D;
   box-shadow: 0 0 80px rgba(255, 107, 157, 0.5);

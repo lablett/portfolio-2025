@@ -2,7 +2,7 @@ import './Card.css';
 
 export const Card = ({ children, type = 'text', borderColor = 'green'}) => {
   return (
-    <div className={`card ${type === 'photo' ? 'photo' : ''} border-${borderColor}`}>
+    <div className={`card ${type} border-${borderColor}`}>
       {children}
     </div>
   );
