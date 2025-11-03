@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Card from './Card/Card'
 import SectionWrapper from './SectionWrapper/SectionWrapper'
+import SectionTitle from './SectionTitle/SectionTitle'
 
 const About = () => {
   const ref = useRef(null)
@@ -24,20 +25,9 @@ const About = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2
-            style={{
-              fontSize: '5rem',
-              fontWeight: '900',
-              background: 'linear-gradient(135deg, #FEC84D, #FF6B9D)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              textTransform: 'uppercase',
-              letterSpacing: '-0.03em',
-              marginBottom: '3rem',
-            }}>
+          <SectionTitle color='yellow-orange'>
             About Me
-          </h2>
+          </SectionTitle>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
