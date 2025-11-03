@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import SectionWrapper from './SectionWrapper/SectionWrapper'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -38,7 +39,7 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl">
+      <SectionWrapper className="text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -133,7 +134,7 @@ const Hero = () => {
             />
           </div>
         </motion.div>
-      </div>
+      </SectionWrapper>
     </section>
   )
 }

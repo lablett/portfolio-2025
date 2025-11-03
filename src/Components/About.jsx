@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Card from './Card/Card'
+import SectionWrapper from './SectionWrapper/SectionWrapper'
 
 const About = () => {
   const ref = useRef(null)
@@ -17,7 +18,7 @@ const About = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-hot-pink/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-neon-green/10 rounded-full blur-3xl" />
 
-      <div className="max-w-6xl w-full relative z-10">
+      <SectionWrapper>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -33,6 +34,7 @@ const About = () => {
               backgroundClip: 'text',
               textTransform: 'uppercase',
               letterSpacing: '-0.03em',
+              marginBottom: '3rem',
             }}>
             About Me
           </h2>
@@ -67,7 +69,7 @@ const About = () => {
             </Card>
           </motion.div>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   )
 }
