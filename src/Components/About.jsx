@@ -22,11 +22,18 @@ const About = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-12 text-center">
-            About{' '}
-            <span className="bg-gradient-to-r from-hot-pink via-gold to-purple bg-clip-text text-transparent">
-              Me
-            </span>
+          <h2
+            style={{
+              fontSize: '5rem',
+              fontWeight: '900',
+              background: 'linear-gradient(135deg, #FEC84D, #FF6B9D)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              textTransform: 'uppercase',
+              letterSpacing: '-0.03em',
+            }}>
+            About Me
           </h2>
         </motion.div>
 
