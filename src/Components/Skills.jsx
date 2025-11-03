@@ -2,23 +2,29 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faPython, faGitAlt, faHtml5, faCss3Alt, faDocker } from '@fortawesome/free-brands-svg-icons'
-import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faReact, faPython, faGitAlt, faGithub, faHtml5, faCss3Alt, faDocker, faApple, faAndroid, faJsSquare } from '@fortawesome/free-brands-svg-icons'
+import { faCode, faGem, faDatabase } from '@fortawesome/free-solid-svg-icons'
+import SectionTitle from './SectionTitle/SectionTitle'
+import { colors } from '../constants/colors'
 
 const Skills = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const skills = [
-    { name: 'React', icon: faReact, color: 'text-purple' },
-    { name: 'React Native', icon: faReact, color: 'text-hot-pink' },
-    { name: 'TypeScript', icon: faCode, color: 'text-gold' },
-    { name: 'Python', icon: faPython, color: 'text-neon-green' },
-    { name: 'Ruby', icon: faCode, color: 'text-hot-pink' },
-    { name: 'Git', icon: faGitAlt, color: 'text-neon-green' },
-    { name: 'HTML', icon: faHtml5, color: 'text-gold' },
-    { name: 'CSS', icon: faCss3Alt, color: 'text-purple' },
-    { name: 'Docker', icon: faDocker, color: 'text-neon-green' },
+    { name: 'React', icon: faReact, color: colors.hotPink },
+    { name: 'JavaScript', icon: faJsSquare, color: colors.gold },
+    { name: 'TypeScript', icon: faCode, color: colors.purple },
+    { name: 'iOS', icon: faApple, color: colors.gold },
+    { name: 'Android', icon: faAndroid, color: colors.neonGreen },
+    { name: 'Ruby', icon: faGem, color: colors.hotPink },
+    { name: 'Python', icon: faPython, color: colors.gold },
+    { name: 'PostgreSQL', icon: faDatabase, color: colors.purple },
+    { name: 'Git', icon: faGitAlt, color: colors.neonGreen },
+    { name: 'GitHub', icon: faGithub, color: colors.neonGreen },
+    { name: 'HTML', icon: faHtml5, color: colors.hotPink },
+    { name: 'CSS', icon: faCss3Alt, color: colors.purple },
+    { name: 'Docker', icon: faDocker, color: colors.purple },
   ]
 
   const containerVariants = {
@@ -61,41 +67,36 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-4">
-            My{' '}
-            <span className="bg-gradient-to-r from-hot-pink via-gold to-purple bg-clip-text text-transparent">
-              Tech Stack
-            </span>
-          </h2>
-          <p className="text-xl text-light-text/70">
-            Technologies I love working with
-          </p>
+          <SectionTitle color="green-yellow">
+            Tech Stack
+          </SectionTitle>
         </motion.div>
 
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          className="flex flex-wrap gap-5 justify-center"
         >
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
               variants={itemVariants}
-              whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
-              className="group relative"
+              className="flex flex-col items-center gap-2.5 transition-all duration-300 hover:scale-110"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-hot-pink/20 to-purple/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
-
-              <div className="relative bg-dark-card border-2 border-light-text/10 group-hover:border-hot-pink/50 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:shadow-2xl hover:shadow-purple/20">
-                <FontAwesomeIcon
-                  icon={skill.icon}
-                  className={`text-6xl ${skill.color} group-hover:animate-float transition-all duration-300`}
-                />
-                <span className="text-lg font-semibold text-light-text/90 group-hover:text-light-text transition-colors">
-                  {skill.name}
-                </span>
+              <div
+                className="transition-all duration-300 hover:scale-125"
+                style={{
+                  fontSize: '3rem',
+                  color: skill.color,
+                  filter: 'drop-shadow(0 0 8px rgba(255, 107, 157, 0.3))',
+                }}
+              >
+                <FontAwesomeIcon icon={skill.icon} />
               </div>
+              <span className="text-xs font-semibold text-light-text/90">
+                {skill.name}
+              </span>
             </motion.div>
           ))}
         </motion.div>
