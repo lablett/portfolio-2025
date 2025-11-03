@@ -7,7 +7,7 @@ const gradientMap = {
 
 export const SectionTitle = ({ children, color = 'pink-yellow' }) => {
   return (
-    <h2 
+    <h2
       style={{
         fontSize: '5rem',
         fontWeight: 900,

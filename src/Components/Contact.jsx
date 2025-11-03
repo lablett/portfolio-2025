@@ -2,9 +2,10 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import SectionTitle from './SectionTitle/SectionTitle'
+import GradientButton from './GradientButton'
 import './Contact.css'
 
 const Contact = () => {
@@ -15,12 +16,12 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: faGithub,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/lablett',
     },
     {
       name: 'LinkedIn',
       icon: faLinkedin,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/lucilleablett',
     },
     {
       name: 'Email',
@@ -62,7 +63,7 @@ const Contact = () => {
       <div className="absolute top-1/3 right-20 w-96 h-96 bg-hot-pink/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/3 left-20 w-80 h-80 bg-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
 
-      <div className="max-w-4xl w-full relative z-10 text-center">
+      <div className="max-w-4xl w-full relative z-10 text-center flex flex-col items-center gap-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -78,7 +79,7 @@ const Contact = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex flex-wrap justify-center gap-32 mb-16"
+          className="flex flex-wrap justify-center gap-32"
         >
           {socials.map((social) => (
             <motion.div
@@ -107,20 +108,13 @@ const Contact = () => {
         </motion.div>
 
         {/* Download CV button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+        <GradientButton
+          variant='green-purple'
+          onClick={console.log('click!')}
+          delay={0.4}
         >
-          <a
-            href="/path-to-your-cv.pdf"
-            download
-            className="group inline-block relative px-8 py-4 text-lg font-semibold bg-linear-to-r from-hot-pink to-purple rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/50"
-          >
-            <span className="relative z-10">Download CV</span>
-            <div className="absolute inset-0 bg-linear-to-r from-gold to-neon-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </a>
-        </motion.div>
+          Download CV
+        </GradientButton>
 
         {/* Fun closing message */}
         <motion.p
