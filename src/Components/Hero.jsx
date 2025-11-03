@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import GradientButton from './GradientButton'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -112,36 +113,9 @@ const Hero = () => {
                 Software Engineer
             </motion.h2>
 
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-            >
-                <button
-                    onClick={scrollToAbout}
-                    className='inline-block font-black uppercase border-4 transition-all duration-300 hover:scale-105'
-                    style={{
-                        padding: "1.5rem 4rem",
-                        fontSize: "1.5rem",
-                        letterSpacing: "0.1em",
-                        background:
-                            "linear-gradient(135deg, #FF6B9D, #FEC84D)",
-                        color: "#1a1a1a",
-                        borderColor: "#1a1a1a",
-                        boxShadow: "0 0 40px rgba(255, 107, 157, 0.5)",
-                    }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow =
-                            "0 0 60px rgba(255, 107, 157, 0.8)";
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow =
-                            "0 0 40px rgba(255, 107, 157, 0.5)";
-                    }}
-                >
-                    About Me
-                </button>
-            </motion.div>
+            <GradientButton onClick={scrollToAbout} delay={0.4}>
+              About Me
+            </GradientButton>
           </div>
       </section>
   );
