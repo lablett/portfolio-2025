@@ -1,0 +1,24 @@
+.section-title {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  display: inline-block;
+}
+
+.section-title.pink-yellow {
+  background: linear-gradient(135deg, #FEC84D, #FF6B9D);
+}
+
+.section-title.purple-orange {
+  background: linear-gradient(135deg, #9D7CF5, #FF6B9D, #FEC84D);
+}
+
+.section-title.green-cyan {
+  background: linear-gradient(135deg, #76FFA3, #6BFFFF);
+}

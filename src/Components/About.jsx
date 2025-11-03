@@ -13,11 +13,22 @@ const About = () => {
     <section
       id="about"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden -mt-[20vh]"
     >
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-hot-pink/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-neon-green/10 rounded-full blur-3xl" />
+      {/* <div className="absolute top-0 right-0 w-96 h-96 bg-hot-pink/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-neon-green/10 rounded-full blur-3xl" /> */}
+      
+      {/* Scanning line effect */}
+      <div
+        className="absolute pointer-events-none"
+        style={{ top: 0, left: 0, right: 0, height: '120vh' }}>
+        <div
+          className="absolute top-0 bottom-0 w-0.5 bg-light-text/10"
+          style={{ animation: 'scanVertical 4s linear infinite', animationDelay: '4s' }}
+        />
+      </div>
+
 
       <SectionWrapper>
         <motion.div
