@@ -10,11 +10,14 @@
   background-color: var(--dark-bg);
   color: #FFFFFF;
   padding: 60px 20px;
+  position: relative;
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 100px;
+  /* text-align: center;
+  /* margin-bottom: 100px; */
+  /* position: relative; */
+  /* z-index: 2; */
 }
 
 .section-title h2 {

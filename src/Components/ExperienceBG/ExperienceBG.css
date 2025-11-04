@@ -1,0 +1,42 @@
+:root {
+  --neon-green: #76FFA3;
+}
+
+.experience-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(118, 255, 163, 0.25) 0%, rgba(118, 255, 163, 0.12) 30%, transparent 60%),
+    radial-gradient(circle at 30% 35%, rgba(254, 200, 77, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 70% 65%, rgba(255, 107, 157, 0.08) 0%, transparent 35%),
+    #0b0614;
+  -webkit-mask-image: radial-gradient(ellipse 150% 70% at 50% 50%, black 0%, black 30%, transparent 80%);
+  mask-image: radial-gradient(ellipse 150% 70% at 50% 50%, black 0%, black 30%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.experience-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.15) 2px, rgba(0, 0, 0, 0.15) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px);
+  pointer-events: none;
+  animation: bg-scanlines 8s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+@keyframes bg-scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}

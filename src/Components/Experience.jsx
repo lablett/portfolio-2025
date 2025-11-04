@@ -6,20 +6,20 @@ import SectionTitle from './SectionTitle/SectionTitle'
 import SectionWrapper from './SectionWrapper/SectionWrapper'
 import ExperienceTimeline from './ExperienceTimeline/ExperienceTimeline'
 import Container from './Container'
+import ExperienceBG from './ExperienceBG/ExperienceBG'
 
 const Experience = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section
-      id="experience"
-      ref={ref}
-      className="min-h-[50vh] flex flex-col items-center justify-center py-20 relative overflow-hidden"
-    >
-      {/* Background decoration */}
-      {/* <div className="absolute top-1/4 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-purple/10 rounded-full blur-3xl" /> */}
+    <div className="relative">
+      <ExperienceBG />
+      <section
+        id="experience"
+        ref={ref}
+        className="min-h-screen flex flex-col items-center justify-center py-20 relative z-10"
+      >
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -36,6 +36,7 @@ const Experience = () => {
         </SectionWrapper>
       </Container>
     </section>
+    </div>
   )
 }
 

@@ -96,14 +96,21 @@
 
 
 /* PULSING GLOW ANIMATION FOR BRACKETS */
+.experience-bracket-tl,
+.experience-bracket-tr,
+.experience-bracket-bl,
+.experience-bracket-br {
+  will-change: opacity;
+}
+
 @keyframes bracket-pulse-glow {
   0%, 100% {
     opacity: 0.5;
-    filter: drop-shadow(0 0 3px var(--bracket-color));
+    filter: drop-shadow(0 0 2px var(--bracket-color));
   }
   50% {
     opacity: 1;
-    filter: drop-shadow(0 0 3px var(--bracket-color)) drop-shadow(0 0 8px var(--bracket-color)) drop-shadow(0 0 16px var(--bracket-color));
+    filter: drop-shadow(0 0 2px var(--bracket-color)) drop-shadow(0 0 6px var(--bracket-color));
   }
 }
 
