@@ -49,7 +49,7 @@ const ExperienceTimeline = () => {
 
   return (
     <div className="experience-timeline">
-      <div className="experience-items">
+      <div className="experience-items flex flex-row max-sm:flex-col">
         {experiences.map((exp, index) => (
           <ExperienceCard
             key={index}
