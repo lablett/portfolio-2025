@@ -20,7 +20,7 @@ const ExperienceTimeline = () => {
     {
       year: '2016',
       title: 'MSc Geospatial Analytics',
-      company: 'University College London',
+      company: 'UCL',
       location: 'London, UK',
       color: 'purple'
     },

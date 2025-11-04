@@ -6,7 +6,7 @@
   position: relative;
   width: 200px;
   height: 120px;
-  padding: 25px;
+  padding: 10px;
   text-align: left;
   transition: all 0.3s ease;
   background: transparent;
@@ -15,7 +15,8 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /* CORNER BRACKETS */
@@ -61,28 +62,28 @@
 
 /* TEXT STYLING - LEFT ALIGNED */
 .experience-title {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  /* margin-bottom: 8px; */
+  margin-bottom: 8px;
   opacity: 0.95;
   transition: all 0.3s ease;
 }
 
 .experience-company {
-  font-size: 0.75rem;
-  /* text-transform: uppercase; */
-  letter-spacing: 0.5px;
-  /* margin-bottom: 5px; */
-  opacity: 0.80;
+  font-size: 0.80rem;
+    font-weight: 700;
+  letter-spacing: 0.1px;
+  opacity: 0.70;
 }
 
 .experience-location {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  opacity: 0.80;
+  opacity: 0.70;
 }
 
 /* RESPONSIVE - Card-specific adjustments */
@@ -90,6 +91,6 @@
   .experience-card {
     min-height: 180px;
     padding: 30px;
-    text-align: center;
+    text-align: left;
   }
 }
