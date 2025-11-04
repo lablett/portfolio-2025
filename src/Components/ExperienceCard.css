@@ -28,8 +28,8 @@
   width: 30px;
   height: 30px;
   border: 2px solid;
-  opacity: 0.7;
   pointer-events: none;
+  animation: bracket-pulse-glow 2s ease-in-out infinite;
 }
 
 .experience-bracket-tl {
@@ -92,6 +92,19 @@
   opacity: 0.70;
   margin-top: auto;
   align-self: flex-start;
+}
+
+
+/* PULSING GLOW ANIMATION FOR BRACKETS */
+@keyframes bracket-pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 3px var(--bracket-color));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px var(--bracket-color)) drop-shadow(0 0 8px var(--bracket-color)) drop-shadow(0 0 16px var(--bracket-color));
+  }
 }
 
 /* RESPONSIVE - Card-specific adjustments */
