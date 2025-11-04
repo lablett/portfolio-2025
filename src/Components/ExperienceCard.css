@@ -1,22 +1,5 @@
-/* EXPERIENCE CARD COMPONENT - STANDALONE STYLING */
-
-/* .experience-item {
-  flex: 1;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-width: 0;
-} */
-
-.experience-year {
-  font-size: 1.3rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  margin-bottom: 15px;
-  opacity: 0.85;
-  font-family: 'Courier New', monospace;
-}
+/* EXPERIENCE CARD COMPONENT - Individual card presentation and styling */
+/* Layout and grid are managed by ExperienceTimeline component */
 
 /* CARD STYLING - NARROW, LEFT-ALIGNED */
 .experience-card {
@@ -103,20 +86,8 @@
   opacity: 0.80;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE - Card-specific adjustments */
 @media (max-width: 768px) {
-  .experience-item {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    align-items: center;
-  }
-
-  .experience-year {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-  }
-
   .experience-card {
     min-height: 180px;
     padding: 30px;

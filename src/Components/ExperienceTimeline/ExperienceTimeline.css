@@ -1,0 +1,162 @@
+/* EXPERIENCE TIMELINE - Layout container for experience cards */
+
+/* TIMELINE CONTAINER */
+.experience-timeline {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Hide the old line element */
+.experience-timeline-line {
+  display: none;
+}
+
+/* TIMELINE ITEMS CONTAINER - Flex grid for wrapping cards */
+.experience-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* INDIVIDUAL TIMELINE ITEM - 280px fixed width card wrapper */
+.experience-item {
+  flex: 0 0 280px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+
+/* YEAR STYLING - Above the card */
+.experience-year {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  opacity: 0.85;
+  font-family: 'Courier New', monospace;
+}
+
+/* COLOR THEMING - Brackets and titles get colors by position */
+.experience-item:nth-child(1) .experience-bracket-tl,
+.experience-item:nth-child(1) .experience-bracket-tr,
+.experience-item:nth-child(1) .experience-bracket-bl,
+.experience-item:nth-child(1) .experience-bracket-br {
+  border-color: var(--neon-green);
+}
+
+.experience-item:nth-child(2) .experience-bracket-tl,
+.experience-item:nth-child(2) .experience-bracket-tr,
+.experience-item:nth-child(2) .experience-bracket-bl,
+.experience-item:nth-child(2) .experience-bracket-br {
+  border-color: var(--purple);
+}
+
+.experience-item:nth-child(3) .experience-bracket-tl,
+.experience-item:nth-child(3) .experience-bracket-tr,
+.experience-item:nth-child(3) .experience-bracket-bl,
+.experience-item:nth-child(3) .experience-bracket-br {
+  border-color: var(--hot-pink);
+}
+
+.experience-item:nth-child(4) .experience-bracket-tl,
+.experience-item:nth-child(4) .experience-bracket-tr,
+.experience-item:nth-child(4) .experience-bracket-bl,
+.experience-item:nth-child(4) .experience-bracket-br {
+  border-color: var(--gold);
+}
+
+.experience-item:nth-child(5) .experience-bracket-tl,
+.experience-item:nth-child(5) .experience-bracket-tr,
+.experience-item:nth-child(5) .experience-bracket-bl,
+.experience-item:nth-child(5) .experience-bracket-br {
+  border-color: var(--hot-pink);
+}
+
+.experience-item:nth-child(6) .experience-bracket-tl,
+.experience-item:nth-child(6) .experience-bracket-tr,
+.experience-item:nth-child(6) .experience-bracket-bl,
+.experience-item:nth-child(6) .experience-bracket-br {
+  border-color: var(--gold);
+}
+
+/* TEXT COLOR THEMING - Titles match bracket colors by position */
+.experience-item:nth-child(1) .experience-year,
+.experience-item:nth-child(1) .experience-title {
+  color: var(--neon-green);
+}
+
+.experience-item:nth-child(2) .experience-year,
+.experience-item:nth-child(2) .experience-title {
+  color: var(--purple);
+}
+
+.experience-item:nth-child(3) .experience-year,
+.experience-item:nth-child(3) .experience-title {
+  color: var(--hot-pink);
+}
+
+.experience-item:nth-child(4) .experience-year,
+.experience-item:nth-child(4) .experience-title {
+  color: var(--gold);
+}
+
+.experience-item:nth-child(5) .experience-year,
+.experience-item:nth-child(5) .experience-title {
+  color: var(--hot-pink);
+}
+
+.experience-item:nth-child(6) .experience-year,
+.experience-item:nth-child(6) .experience-title {
+  color: var(--gold);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+
+/* Tablet: Adjust year font size */
+@media (max-width: 768px) {
+  .experience-year {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .experience-card {
+    min-height: 160px;
+  }
+}
+
+/* Mobile: Single column layout */
+@media (max-width: 480px) {
+  .experience-timeline {
+    padding: 40px 15px;
+  }
+
+  .experience-items {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .experience-item {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .experience-year {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .experience-card {
+    min-height: 180px;
+    padding: 30px;
+  }
+}
