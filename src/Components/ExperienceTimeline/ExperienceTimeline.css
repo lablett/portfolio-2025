@@ -12,7 +12,7 @@
 /* TIMELINE ITEMS CONTAINER - Flex grid for wrapping cards */
 .experience-items {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
   position: relative;
   z-index: 2;
@@ -21,7 +21,7 @@
   flex-wrap: wrap;
 }
 
-/* INDIVIDUAL TIMELINE ITEM - 280px fixed width card wrapper */
+/* INDIVIDUAL TIMELINE ITEM - 200px fixed width card wrapper */
 .experience-item {
   flex: 0 0 200px;
   position: relative;
