@@ -58,14 +58,16 @@ const ExperienceCard = ({
           className="experience-bracket-tr"
           style={{ borderColor }}
         />
-        <div
-          className="experience-title"
-          style={{ color: borderColor }}
-        >
-          {title}
-        </div>
-        <div className="experience-company">
-          {company}
+        <div className="experience-top-left">
+          <div
+            className="experience-title"
+            style={{ color: borderColor }}
+          >
+            {title}
+          </div>
+          <div className="experience-company">
+            {company}
+          </div>
         </div>
         <div className="experience-location">
           {location}
