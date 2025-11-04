@@ -1,0 +1,125 @@
+/* EXPERIENCE CARD COMPONENT - STANDALONE STYLING */
+
+/* .experience-item {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+} */
+
+.experience-year {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+  opacity: 0.85;
+  font-family: 'Courier New', monospace;
+}
+
+/* CARD STYLING - NARROW, LEFT-ALIGNED */
+.experience-card {
+  position: relative;
+  width: 100%;
+  min-height: 140px;
+  height: 160px;
+  padding: 25px;
+  text-align: left;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* CORNER BRACKETS */
+.experience-bracket-tl,
+.experience-bracket-tr,
+.experience-bracket-bl,
+.experience-bracket-br {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.experience-bracket-tl {
+  top: -8px;
+  left: -8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.experience-bracket-tr {
+  top: -8px;
+  right: -8px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.experience-bracket-bl {
+  bottom: -8px;
+  left: -8px;
+  border-right: none;
+  border-top: none;
+}
+
+.experience-bracket-br {
+  bottom: -8px;
+  right: -8px;
+  border-left: none;
+  border-top: none;
+}
+
+/* TEXT STYLING - LEFT ALIGNED */
+.experience-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+}
+
+.experience-company {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 5px;
+  opacity: 0.80;
+}
+
+.experience-location {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.80;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .experience-item {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .experience-year {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .experience-card {
+    min-height: 180px;
+    padding: 30px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,199 @@
+:root {
+  --hot-pink: #FF6B9D;
+  --gold: #FEC84D;
+  --neon-green: #76FFA3;
+  --purple: #9D7CF5;
+  --dark-bg: #0A0614;
+}
+
+.experience-section {
+  background-color: var(--dark-bg);
+  color: #FFFFFF;
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--neon-green), var(--hot-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.section-title p {
+  color: var(--neon-green);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* TIMELINE CONTAINER */
+.experience-timeline {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Hide the old line element */
+.experience-timeline-line {
+  display: none;
+}
+
+.experience-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.experience-item {
+  flex: 0 0 280px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+
+/* YEAR STYLING - ABOVE THE BOX */
+.experience-year {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  opacity: 0.85;
+  font-family: 'Courier New', monospace;
+}
+
+/* Card styling is defined in ExperienceCard.css */
+
+/* COLOR THE BRACKETS */
+.experience-item:nth-child(1) .experience-bracket-tl,
+.experience-item:nth-child(1) .experience-bracket-tr,
+.experience-item:nth-child(1) .experience-bracket-bl,
+.experience-item:nth-child(1) .experience-bracket-br {
+  border-color: var(--neon-green);
+}
+
+.experience-item:nth-child(2) .experience-bracket-tl,
+.experience-item:nth-child(2) .experience-bracket-tr,
+.experience-item:nth-child(2) .experience-bracket-bl,
+.experience-item:nth-child(2) .experience-bracket-br {
+  border-color: var(--purple);
+}
+
+.experience-item:nth-child(3) .experience-bracket-tl,
+.experience-item:nth-child(3) .experience-bracket-tr,
+.experience-item:nth-child(3) .experience-bracket-bl,
+.experience-item:nth-child(3) .experience-bracket-br {
+  border-color: var(--hot-pink);
+}
+
+.experience-item:nth-child(4) .experience-bracket-tl,
+.experience-item:nth-child(4) .experience-bracket-tr,
+.experience-item:nth-child(4) .experience-bracket-bl,
+.experience-item:nth-child(4) .experience-bracket-br {
+  border-color: var(--gold);
+}
+
+.experience-item:nth-child(5) .experience-bracket-tl,
+.experience-item:nth-child(5) .experience-bracket-tr,
+.experience-item:nth-child(5) .experience-bracket-bl,
+.experience-item:nth-child(5) .experience-bracket-br {
+  border-color: var(--hot-pink);
+}
+
+.experience-item:nth-child(6) .experience-bracket-tl,
+.experience-item:nth-child(6) .experience-bracket-tr,
+.experience-item:nth-child(6) .experience-bracket-bl,
+.experience-item:nth-child(6) .experience-bracket-br {
+  border-color: var(--gold);
+}
+
+/* Text styling is defined in ExperienceCard.css */
+
+/* Title colors match bracket colors */
+.experience-item:nth-child(1) .experience-year,
+.experience-item:nth-child(1) .experience-title {
+  color: var(--neon-green);
+}
+
+.experience-item:nth-child(2) .experience-year,
+.experience-item:nth-child(2) .experience-title {
+  color: var(--purple);
+}
+
+.experience-item:nth-child(3) .experience-year,
+.experience-item:nth-child(3) .experience-title {
+  color: var(--hot-pink);
+}
+
+.experience-item:nth-child(4) .experience-year,
+.experience-item:nth-child(4) .experience-title {
+  color: var(--gold);
+}
+
+.experience-item:nth-child(5) .experience-year,
+.experience-item:nth-child(5) .experience-title {
+  color: var(--hot-pink);
+}
+
+.experience-item:nth-child(6) .experience-year,
+.experience-item:nth-child(6) .experience-title {
+  color: var(--gold);
+}
+
+/* Hover effects are defined in ExperienceCard.css */
+
+/* Responsive adjustments - keep consistent flex-basis approach */
+@media (max-width: 768px) {
+  .experience-year {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .experience-card {
+    min-height: 160px;
+  }
+}
+
+/* Mobile: 1 column (stacked) */
+@media (max-width: 480px) {
+  .experience-timeline {
+    padding: 40px 15px;
+  }
+
+  .experience-items {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .experience-item {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .experience-year {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .experience-card {
+    min-height: 180px;
+    padding: 30px;
+  }
+}
