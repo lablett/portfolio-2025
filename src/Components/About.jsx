@@ -13,7 +13,7 @@ const About = () => {
     <section
       id="about"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden -mt-[20vh]"
+      className="min-h-screen flex flex-col items-center justify-center py-20 px-6 relative overflow-hidden -mt-[20vh]"
     >
       {/* Background decoration */}
       {/* <div className="absolute top-0 right-0 w-96 h-96 bg-hot-pink/10 rounded-full blur-3xl" />
@@ -29,19 +29,18 @@ const About = () => {
         />
       </div>
 
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.6 }}
+      >
+        <SectionTitle color='yellow-orange'>
+          About Me
+        </SectionTitle>
+      </motion.div>
 
       <SectionWrapper>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.6 }}
-        >
-          <SectionTitle color='yellow-orange'>
-            About Me
-          </SectionTitle>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image placeholder */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

@@ -52,7 +52,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center py-20 px-6 relative overflow-hidden"
     >
       {/* Scanning line effect */}
       <div
@@ -64,7 +64,6 @@ const Projects = () => {
         />
       </div>
 
-      <SectionWrapper>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -75,6 +74,9 @@ const Projects = () => {
             Work
           </SectionTitle>
         </motion.div>
+
+
+        <SectionWrapper>
 
         <motion.div
           variants={containerVariants}
