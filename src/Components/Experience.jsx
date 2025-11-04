@@ -25,7 +25,7 @@ const Experience = () => {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.6 }}
       >
-        <SectionTitle color='yellow-orange'>
+      <SectionTitle color='yellow-orange'>
           Experience
         </SectionTitle>
       </motion.div>

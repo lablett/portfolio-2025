@@ -49,7 +49,6 @@ const ExperienceTimeline = () => {
 
   return (
     <div className="experience-timeline">
-      <div className="experience-timeline-line"></div>
       <div className="experience-items">
         {experiences.map((exp, index) => (
           <ExperienceCard
