@@ -92,8 +92,8 @@
 
 .section-bg-pattern-about {
   background:
-    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 107, 157, 0.05) 40px, rgba(255, 107, 157, 0.05) 41px),
-    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 107, 157, 0.05) 40px, rgba(255, 107, 157, 0.05) 41px);
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 107, 157, 0.05) 40px, rgba(255, 107, 157, 0.1) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 107, 157, 0.05) 40px, rgba(255, 107, 157, 0.1) 41px);
 }
 
 /* ============================================
@@ -162,14 +162,70 @@
   background: #0A0614;
 }
 
+.section-bg-gradient-contact {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(118, 255, 163, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(254, 200, 77, 0.3) 0%, transparent 50%);
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
+}
+
 .section-bg-pattern-contact {
   background:
-    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(118, 255, 163, 0.05) 40px, rgba(118, 255, 163, 0.05) 41px),
-    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(118, 255, 163, 0.05) 40px, rgba(118, 255, 163, 0.05) 41px);
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px);
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
 }
 
 .section-bg-mask-contact {
-  background: radial-gradient(ellipse 120% 80% at 50% 70%, transparent 0%, transparent 60%, #0A0614 100%);
+  background: transparent;
+}
+
+/* ============================================
+   CONTACT Background (Specialized Component)
+   - Rainbow gradient (pink → green → gold) with circular mask
+   - Synchronized grid overlay fading with gradient
+   - Centered at 50% 30% from top
+   ============================================ */
+
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -10;
+}
+
+.contact-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(118, 255, 163, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(254, 200, 77, 0.3) 0%, transparent 50%);
+  z-index: 1;
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
+}
+
+.contact-bg-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px);
+  z-index: 2;
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, transparent 40%, black 70%, black 100%);
 }
 
 /* ============================================

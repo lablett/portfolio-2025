@@ -117,16 +117,6 @@ const Contact = () => {
           >
             Download CV
           </GradientButton>
-
-          {/* Fun closing message */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-12 text-light-text/50 text-sm"
-          >
-            Built with 💚 and vibrant energy
-          </motion.p>
           </div>
         </CenteredContent>
       </Container>
