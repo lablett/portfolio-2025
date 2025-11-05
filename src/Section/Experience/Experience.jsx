@@ -1,12 +1,11 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import './Experience.css'
-import SectionTitle from './SectionTitle/SectionTitle'
-import SectionWrapper from './SectionWrapper/SectionWrapper'
-import ExperienceTimeline from './ExperienceTimeline/ExperienceTimeline'
-import Container from './Container'
-import ExperienceBG from './ExperienceBG/ExperienceBG'
+import SectionTitle from '@Components/SectionTitle/SectionTitle'
+import SectionWrapper from '@Components/SectionWrapper'
+import ExperienceTimeline from '@Components/ExperienceTimeline/ExperienceTimeline'
+import Container from '@Components/Container'
+import ExperienceBG from '@Components/ExperienceBG/ExperienceBG'
 
 const Experience = () => {
   const ref = useRef(null)

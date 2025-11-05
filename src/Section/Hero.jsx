@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import GradientButton from './GradientButton'
+import GradientButton from '@Components/GradientButton'
 
 const Hero = () => {
   const scrollToAbout = () => {

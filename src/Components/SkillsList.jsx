@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faPython, faGitAlt, faGithub, faHtml5, faCss3Alt, faDocker, faApple, faAndroid, faJsSquare } from '@fortawesome/free-brands-svg-icons'
 import { faCode, faGem, faDatabase } from '@fortawesome/free-solid-svg-icons'
-import { colors } from '../constants/colors'
+import { colors } from '@constants/colors'
 
 const skillsList = [
   { name: 'React', icon: faReact, color: colors.hotPink },

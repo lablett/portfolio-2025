@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import Container from './Container'
-import SectionWrapper from './SectionWrapper/SectionWrapper'
-import SectionTitle from './SectionTitle/SectionTitle'
-import SkillsList from './SkillsList'
+import Container from '@Components/Container'
+import SectionWrapper from '@Components/SectionWrapper'
+import SectionTitle from '@Components/SectionTitle/SectionTitle'
+import SkillsList from '@Components/SkillsList'
 
 const Skills = () => {
   const ref = useRef(null)

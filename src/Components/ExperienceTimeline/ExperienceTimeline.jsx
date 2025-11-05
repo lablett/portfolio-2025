@@ -1,4 +1,4 @@
-import ExperienceCard from '../ExperienceCard'
+import ExperienceCard from '@Components/ExperienceCard/ExperienceCard'
 import './ExperienceTimeline.css'
 
 const ExperienceTimeline = () => {

@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import Card from './Card/Card'
-import SectionWrapper from './SectionWrapper/SectionWrapper'
-import SectionTitle from './SectionTitle/SectionTitle'
+import Card from '@Components/Card/Card'
+import SectionWrapper from '@Components/SectionWrapper'
+import SectionTitle from '@Components/SectionTitle/SectionTitle'
 
 const Projects = () => {
   const ref = useRef(null)
