@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Card from '@Components/Card/Card'
-import SectionWrapper from '@Components/SectionWrapper'
+import CenteredContent from '@Components/CenteredContent'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 
 const Projects = () => {
@@ -76,7 +76,7 @@ const Projects = () => {
         </motion.div>
 
 
-        <SectionWrapper>
+        <CenteredContent>
 
         <motion.div
           variants={containerVariants}
@@ -121,7 +121,7 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-      </SectionWrapper>
+      </CenteredContent>
     </section>
   )
 }

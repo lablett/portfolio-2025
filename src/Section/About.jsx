@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { colors } from '@constants/colors'
+import CenteredContent from '@Components/CenteredContent'
 
 const About = () => {
   const ref = useRef(null)
@@ -23,7 +24,7 @@ const About = () => {
       }}
     >
       <div className="max-w-6xl w-full px-10 py-32">
-        <div className="grid md:grid-cols-2 gap-32 items-center relative z-10">
+        <CenteredContent className="grid md:grid-cols-2 gap-32 items-center relative z-10">
           {/* Photo Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -149,7 +150,7 @@ const About = () => {
               </div>
             </div>
           </motion.div>
-        </div>
+        </CenteredContent>
       </div>
     </section>
   )

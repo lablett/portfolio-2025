@@ -8,7 +8,7 @@ import Container from '@Components/Container'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import GradientButton from '@Components/GradientButton'
 import './Contact.css'
-import SectionWrapper from '@Components/SectionWrapper'
+import CenteredContent from '@Components/CenteredContent'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -73,7 +73,7 @@ const Contact = () => {
         </motion.div>
 
 
-        <SectionWrapper>
+        <CenteredContent>
           <div className="max-w-4xl w-full relative z-10 flex flex-col items-center gap-16">
 
           {/* Social links */}
@@ -128,7 +128,7 @@ const Contact = () => {
             Built with 💚 and vibrant energy
           </motion.p>
           </div>
-        </SectionWrapper>
+        </CenteredContent>
       </Container>
     </section>
   )

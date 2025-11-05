@@ -2,7 +2,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import './Experience.css'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
-import SectionWrapper from '@Components/SectionWrapper'
+import CenteredContent from '@Components/CenteredContent'
 import ExperienceTimeline from '@Components/ExperienceTimeline/ExperienceTimeline'
 import Container from '@Components/Container'
 import ExperienceBG from '@Components/ExperienceBG/ExperienceBG'
@@ -30,9 +30,9 @@ const Experience = () => {
           </SectionTitle>
         </motion.div>
 
-        <SectionWrapper>
+        <CenteredContent>
           <ExperienceTimeline />
-        </SectionWrapper>
+        </CenteredContent>
       </Container>
     </section>
     </div>

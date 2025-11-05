@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Container from '@Components/Container'
-import SectionWrapper from '@Components/SectionWrapper'
+import CenteredContent from '@Components/CenteredContent'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import SkillsList from '@Components/SkillsList'
 
@@ -32,9 +32,9 @@ const Skills = () => {
               Tech Stack
             </SectionTitle>
           </motion.div>
-          <SectionWrapper>
+          <CenteredContent>
             <SkillsList isInView={isInView} />
-          </SectionWrapper>
+          </CenteredContent>
         </div>
       </Container>
     </section>
