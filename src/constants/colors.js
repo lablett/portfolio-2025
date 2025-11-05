@@ -17,17 +17,20 @@ const colorWithAlpha = (hex, alpha = 0.9) => {
 
 // All gradients in one place
 export const gradients = {
+  // Just green
+  justGreen: `linear-gradient(135deg, ${colors.neonGreen})`,
+
   // Multi-color gradients
   multi: `linear-gradient(135deg, ${colors.gold}, ${colors.hotPink}, ${colors.neonGreen})`,
 
-  // Two-color gradients (camelCase)
+  // Two-color gradients
   yellowOrange: `linear-gradient(135deg, ${colors.gold}, ${colors.hotPink})`,
   greenPurple: `linear-gradient(135deg, ${colors.neonGreen}, ${colors.purple})`,
   pinkYellow: `linear-gradient(135deg, ${colors.hotPink}, ${colors.gold})`,
+  greenYellow: `linear-gradient(135deg, ${colors.neonGreen}, ${colors.gold})`,
 
-  // Three-color gradients (camelCase)
+  // Three-color gradients
   purplePink: `linear-gradient(135deg, ${colors.purple}, ${colors.hotPink}, ${colors.gold})`,
-  greenYellow: `linear-gradient(135deg, ${colors.neonGreen}, ${colors.gold}, ${colors.hotPink})`,
 
   // Vertical gradients (scrollbar)
   scrollbar: `linear-gradient(180deg, ${colors.hotPink}, ${colors.purple})`,

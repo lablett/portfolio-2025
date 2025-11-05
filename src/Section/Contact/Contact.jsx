@@ -69,7 +69,7 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <SectionTitle color="greenPurple">
+          <SectionTitle color="justGreen">
             Get In Touch
           </SectionTitle>
         </motion.div>

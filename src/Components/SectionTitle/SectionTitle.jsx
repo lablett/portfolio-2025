@@ -3,14 +3,16 @@ import './SectionTitle.css'
 
 export const SectionTitle = ({ children, color = 'pinkYellow' }) => {
   return (
-    <h2
-      className={`section-title ${color}`}
-      style={{
-        background: gradients[color],
-      }}
-    >
-      {children}
-    </h2>
+    <div className="section-title-wrapper">
+      <h2
+        className={`section-title ${color}`}
+        style={{
+          backgroundImage: gradients[color],
+        }}
+      >
+        {children}
+      </h2>
+    </div>
   )
 }
 

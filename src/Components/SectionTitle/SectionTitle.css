@@ -1,45 +1,40 @@
-.section-title {
-  font-size: 5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-  margin-bottom: 3rem;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
+.section-title-wrapper {
   display: inline-block;
   position: relative;
 }
 
-/* Scanline overlay effect - CRT monitor aesthetic */
+.section-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0em;
+  margin-bottom: 3rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #0A0614;
+  padding: calc(0.12em / 2);
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 0.12em;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 8px rgba(118, 255, 163, 0.3)) drop-shadow(0 0 12px rgba(157, 124, 245, 0.2));
+}
+
+/* Scanlines overlay - appears in the glow */
 .section-title::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
   background: repeating-linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.15) 0px,
-    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.03) 0px,
+    rgba(0, 0, 0, 0.03) 2px,
     transparent 2px,
     transparent 4px
   );
   pointer-events: none;
-  mix-blend-mode: multiply;
-  z-index: 10;
-}
-
-.section-title.pink-yellow {
-  background: linear-gradient(135deg, #FEC84D, #FF6B9D);
-}
-
-.section-title.purple-orange {
-  background: linear-gradient(135deg, #9D7CF5, #FF6B9D, #FEC84D);
-}
-
-.section-title.green-purple {
-  background: linear-gradient(135deg, #76FFA3, #9D7CF5);
+  z-index: -1;
 }
