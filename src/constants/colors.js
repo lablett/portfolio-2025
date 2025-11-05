@@ -36,12 +36,12 @@ export const gradients = {
 
 // Button variants with gradients and glow colors
 export const buttonVariants = {
-  'pink-yellow': {
+  'pinkYellow': {
     gradient: `linear-gradient(135deg, ${colors.hotPink}, ${colors.gold})`,
     glowColor: colorWithAlpha(colors.hotPink, 0.5),
     glowColorHover: colorWithAlpha(colors.hotPink, 0.8),
   },
-  'green-purple': {
+  'greenPurple': {
     gradient: `linear-gradient(135deg, ${colors.neonGreen}, ${colors.purple})`,
     glowColor: colorWithAlpha(colors.neonGreen, 0.5),
     glowColorHover: colorWithAlpha(colors.neonGreen, 0.8),
@@ -83,5 +83,46 @@ export const gridPattern = `
     repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px),
     repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px)
   `
+
+// Background configuration for SectionBackground component
+// Each section defines: type, showScanlines, showGrid, showMask
+export const backgroundConfig = {
+  hero: {
+    type: 'hero',
+    showScanlines: true,
+    showGrid: true,
+    showMask: true,
+  },
+  about: {
+    type: 'about',
+    showScanlines: false,
+    showGrid: false,
+    showMask: false,
+  },
+  experience: {
+    type: 'experience',
+    showScanlines: false,
+    showGrid: false,
+    showMask: false,
+  },
+  projects: {
+    type: 'projects',
+    showScanlines: true,
+    showGrid: false,
+    showMask: false,
+  },
+  skills: {
+    type: 'skills',
+    showScanlines: false,
+    showGrid: false,
+    showMask: false,
+  },
+  contact: {
+    type: 'contact',
+    showScanlines: false,
+    showGrid: false,
+    showMask: false,
+  },
+}
 
 export { colorWithAlpha }

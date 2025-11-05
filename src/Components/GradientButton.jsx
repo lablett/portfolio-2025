@@ -5,14 +5,14 @@ const GradientButton = ({
   children,
   onClick,
   delay = 0,
-  variant = 'pink-yellow',
+  variant = 'pinkYellow',
   gradient,
   glowColor,
   glowColorHover,
   className = '',
   style = {},
 }) => {
-  const variantStyles = buttonVariants[variant] || buttonVariants['pink-yellow']
+  const variantStyles = buttonVariants[variant] || buttonVariants['pinkYellow']
   const finalGradient = gradient || variantStyles.gradient
   const finalGlowColor = glowColor || variantStyles.glowColor
   const finalGlowColorHover = glowColorHover || variantStyles.glowColorHover
