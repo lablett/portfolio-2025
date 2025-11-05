@@ -60,7 +60,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden"
+      className="flex flex-col items-center justify-center py-10 px-6 relative overflow-hidden"
     >
       <SectionBackground type="contact" />
       <Container>

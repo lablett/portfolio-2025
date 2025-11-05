@@ -15,7 +15,7 @@ const Experience = () => {
       <section
         id="experience"
         ref={ref}
-        className="min-h-screen flex flex-col items-center justify-center py-20 relative z-10"
+        className="min-h-screen flex flex-col items-center justify-center py-10 relative overflow-hidden"
       >
       <SectionBackground type="experience" />
       <Container>

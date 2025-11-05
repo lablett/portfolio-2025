@@ -14,7 +14,7 @@ const About = () => {
     <section
       id="about"
       ref={ref}
-      className="min-h-[80vh] flex items-center justify-center relative overflow-hidden"
+      className="min-h-[80vh] flex flex-col items-center justify-center relative overflow-hidden"
     >
       <SectionBackground type="about" />
       <div className="max-w-6xl w-full px-10 py-32">
