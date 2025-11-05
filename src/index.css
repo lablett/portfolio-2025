@@ -1,23 +1,16 @@
 @import "tailwindcss";
 
-@theme {
-  /* Vibrant Rave Energy Palette */
+/* CSS Variables - Single source of truth for colors */
+:root {
+  /* Vibrant Rave Energy Palette (from src/constants/colors.js) */
   --color-hot-pink: #FF6B9D;
   --color-gold: #FEC84D;
   --color-neon-green: #76FFA3;
   --color-purple: #9D7CF5;
   --color-dark-bg: #0A0614;
-  --color-dark-card: #1A1A2E;
   --color-light-text: #FFFFFF;
 
-  /* Custom animations */
-  --animate-gradient-shift: gradient-shift 8s ease infinite;
-  --animate-float: float 3s ease-in-out infinite;
-  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
-  --animate-scan: scan 3s linear infinite;
-}
-
-:root {
+  /* Typography */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -38,8 +31,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #0A0614;
-  color: #FFFFFF;
+  background-color: var(--color-dark-bg);
+  color: var(--color-light-text);
   overflow-x: hidden;
   position: relative;
 }
@@ -58,12 +51,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #FF6B9D, #9D7CF5);
+  background: linear-gradient(180deg, var(--color-hot-pink), var(--color-purple));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #FEC84D, #76FFA3);
+  background: linear-gradient(180deg, var(--color-gold), var(--color-neon-green));
 }
 
 /* Party mode styles - will be toggled with JS */
