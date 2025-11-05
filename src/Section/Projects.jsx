@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import Card from '@Components/Card/Card'
 import CenteredContent from '@Components/CenteredContent'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
+import GradientHeading from '@Components/GradientHeading'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -99,9 +100,9 @@ const Projects = () => {
                   {/* Project info - 40% height */}
                   <div className="flex flex-col justify-between flex-1">
                     <div>
-                      <h3 className="text-2xl font-bold text-light-text mb-4 uppercase tracking-wider">
+                      <GradientHeading size="small" color="multi" as="h3" className="mb-4">
                         {project.title}
-                      </h3>
+                      </GradientHeading>
                     </div>
 
                     {/* Tech stack */}

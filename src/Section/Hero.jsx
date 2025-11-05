@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import GradientButton from '@Components/GradientButton'
+import Subtitle from '@Components/Subtitle'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -97,21 +98,15 @@ const Hero = () => {
               </h1>
             </motion.div>
 
-            <motion.h2
+            <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className='font-black uppercase'
-                style={{
-                    fontSize: "2rem",
-                    letterSpacing: "0.1em",
-                    marginBottom: "3rem",
-                    color: "#76FFA3",
-                    textShadow: "0 0 20px rgba(118, 255, 163, 0.5)",
-                }}
             >
+              <Subtitle color="green" className='text-2xl' style={{ textShadow: "0 0 20px rgba(118, 255, 163, 0.5)", marginBottom: "3rem" }}>
                 Software Engineer
-            </motion.h2>
+              </Subtitle>
+            </motion.div>
 
             <GradientButton onClick={scrollToAbout} delay={0.4}>
               About Me

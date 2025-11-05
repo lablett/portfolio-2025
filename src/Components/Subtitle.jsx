@@ -9,6 +9,7 @@ const Subtitle = ({
   children,
   color = 'green',
   className = '',
+  style = {},
 }) => {
   const textColor = colorMap[color] || colorMap['green']
 
@@ -22,6 +23,7 @@ const Subtitle = ({
         textTransform: 'uppercase',
         letterSpacing: '0.15em',
         marginBottom: '30px',
+        ...style,
       }}
     >
       {children}
