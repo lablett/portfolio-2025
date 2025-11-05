@@ -9,6 +9,27 @@
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
   display: inline-block;
+  position: relative;
+}
+
+/* Scanline overlay effect - CRT monitor aesthetic */
+.section-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 10;
 }
 
 .section-title.pink-yellow {
