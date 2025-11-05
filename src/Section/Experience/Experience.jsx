@@ -5,7 +5,7 @@ import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import CenteredContent from '@Components/CenteredContent'
 import ExperienceTimeline from '@Components/ExperienceTimeline/ExperienceTimeline'
 import Container from '@Components/Container'
-import ExperienceBG from '@Components/ExperienceBG/ExperienceBG'
+import SectionBackground from '@Components/SectionBackground/SectionBackground'
 
 const Experience = () => {
   const ref = useRef(null)
@@ -17,7 +17,7 @@ const Experience = () => {
         ref={ref}
         className="min-h-screen flex flex-col items-center justify-center py-20 relative z-10"
       >
-      <ExperienceBG />
+      <SectionBackground type="experience" />
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 50 }}

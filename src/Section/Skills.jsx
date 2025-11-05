@@ -5,6 +5,7 @@ import Container from '@Components/Container'
 import CenteredContent from '@Components/CenteredContent'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import SkillsList from '@Components/SkillsList'
+import SectionBackground from '@Components/SectionBackground/SectionBackground'
 
 const Skills = () => {
   const ref = useRef(null)
@@ -16,10 +17,7 @@ const Skills = () => {
       ref={ref}
       className="min-h-[75vh] flex flex-col items-center justify-center py-20 relative overflow-hidden"
     >
-      {/* Background decoration */}
-      {/* <div className="absolute top-1/4 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-purple/10 rounded-full blur-3xl" /> */}
-
+      <SectionBackground type="skills" />
       <Container>
         <div className="max-w-6xl w-full relative z-10">
           <motion.div

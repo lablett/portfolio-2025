@@ -4,7 +4,7 @@ import CenteredContent from '@Components/CenteredContent'
 import Photo from '@Components/About/Photo'
 import Bio from '@Components/About/Bio'
 import Skills from '@Components/About/Skills'
-import { backgrounds } from '@constants/colors'
+import SectionBackground from '@Components/SectionBackground/SectionBackground'
 
 const About = () => {
   const ref = useRef(null)
@@ -15,10 +15,8 @@ const About = () => {
       id="about"
       ref={ref}
       className="min-h-[80vh] flex items-center justify-center relative overflow-hidden"
-      style={{
-        background: backgrounds.about,
-      }}
     >
+      <SectionBackground type="about" />
       <div className="max-w-6xl w-full px-10 py-32">
         <CenteredContent className="grid md:grid-cols-2 gap-32 items-center relative z-10">
           <Photo isInView={isInView} />

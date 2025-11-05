@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import GradientButton from '@Components/GradientButton'
 import Subtitle from '@Components/Subtitle'
-import { backgrounds, backgroundMasks, gridPattern } from '@constants/colors'
+import SectionBackground from '@Components/SectionBackground/SectionBackground'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -12,44 +12,8 @@ const Hero = () => {
       <section
           id='hero'
           className='relative h-[120vh] flex items-center justify-center'
-          style={{
-              background: backgrounds.hero,
-          }}
       >
-          {/* Top/bottom fade overlay */}
-          <div
-              className='absolute pointer-events-none'
-              style={{
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: backgroundMasks.hero,
-              }}
-          />
-          {/* Scanning line effect */}
-          <div
-              className='absolute pointer-events-none'
-              style={{ top: 0, left: 0, right: 0, height: "120vh" }}
-          >
-              <div
-                  className='absolute left-0 right-0 h-0.5 bg-light-text/10'
-                  style={{ animation: "scanHorizontal 4s linear infinite" }}
-              />
-          </div>
-
-          {/* Grid overlay for depth */}
-          <div
-              className='absolute opacity-100 pointer-events-none'
-              style={{
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: "120vh",
-                  backgroundImage: gridPattern,
-              }}
-          />
-
+          <SectionBackground type="hero" />
           {/* Content */}
           <div
             className='text-center px-6'

@@ -9,6 +9,7 @@ import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import GradientButton from '@Components/GradientButton'
 import './Contact.css'
 import CenteredContent from '@Components/CenteredContent'
+import SectionBackground from '@Components/SectionBackground/SectionBackground'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -61,6 +62,7 @@ const Contact = () => {
       ref={ref}
       className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden"
     >
+      <SectionBackground type="contact" />
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -68,11 +70,9 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <SectionTitle color="greenPurple">
-            Connect
+            Get In Touch
           </SectionTitle>
         </motion.div>
-
-
         <CenteredContent>
           <div className="max-w-4xl w-full relative z-10 flex flex-col items-center gap-16">
 

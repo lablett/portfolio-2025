@@ -5,6 +5,7 @@ import Card from '@Components/Card/Card'
 import CenteredContent from '@Components/CenteredContent'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import GradientHeading from '@Components/GradientHeading'
+import SectionBackground from '@Components/SectionBackground/SectionBackground'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -55,16 +56,7 @@ const Projects = () => {
       ref={ref}
       className="min-h-screen flex flex-col items-center justify-center py-20 px-6 relative overflow-hidden"
     >
-      {/* Scanning line effect */}
-      <div
-        className="absolute pointer-events-none"
-        style={{ top: 0, left: 0, right: 0, height: '120vh' }}>
-        <div
-          className="absolute top-0 bottom-0 w-0.5 bg-light-text/10"
-          style={{ animation: 'scanVertical 4s linear infinite', animationDelay: '2s' }}
-        />
-      </div>
-
+      <SectionBackground type="projects" />
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -75,10 +67,7 @@ const Projects = () => {
             Work
           </SectionTitle>
         </motion.div>
-
-
         <CenteredContent>
-
         <motion.div
           variants={containerVariants}
           initial="hidden"

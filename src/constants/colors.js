@@ -84,45 +84,4 @@ export const gridPattern = `
     repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px)
   `
 
-// Background configuration for SectionBackground component
-// Each section defines: type, showScanlines, showGrid, showMask
-export const backgroundConfig = {
-  hero: {
-    type: 'hero',
-    showScanlines: true,
-    showGrid: true,
-    showMask: true,
-  },
-  about: {
-    type: 'about',
-    showScanlines: false,
-    showGrid: false,
-    showMask: false,
-  },
-  experience: {
-    type: 'experience',
-    showScanlines: false,
-    showGrid: false,
-    showMask: false,
-  },
-  projects: {
-    type: 'projects',
-    showScanlines: true,
-    showGrid: false,
-    showMask: false,
-  },
-  skills: {
-    type: 'skills',
-    showScanlines: false,
-    showGrid: false,
-    showMask: false,
-  },
-  contact: {
-    type: 'contact',
-    showScanlines: false,
-    showGrid: false,
-    showMask: false,
-  },
-}
-
 export { colorWithAlpha }

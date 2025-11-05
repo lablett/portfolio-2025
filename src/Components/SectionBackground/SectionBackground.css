@@ -1,0 +1,213 @@
+/* Section Background - Base Styles */
+
+.section-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -10;
+}
+
+/* Layer 0: Background Color (back-most) */
+.section-bg-color {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Layer 1: Background Gradient */
+.section-bg-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Layer 2: Background Pattern */
+.section-bg-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* Layer 3: Background Scanline (animated) */
+.section-bg-scanline {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Layer 4: Background Mask (front-most) */
+.section-bg-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ============================================
+   HERO Section Background
+   - Radial gradients (pink, green, gold)
+   - Grid overlay
+   - Horizontal scanlines
+   - Top/bottom fade mask
+   ============================================ */
+
+.section-bg-color-hero {
+  background: #0A0614;
+}
+
+.section-bg-gradient-hero {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(118, 255, 163, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(254, 200, 77, 0.3) 0%, transparent 50%);
+}
+
+.section-bg-pattern-hero {
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px);
+}
+
+.section-bg-scanline-hero {
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: scanHorizontal 4s linear infinite;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 16.67%, black 83.33%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 16.67%, black 83.33%, transparent 100%);
+}
+
+.section-bg-mask-hero {
+  background: linear-gradient(to bottom, #0A0614 0%, transparent 0%, transparent 83.33%, #0A0614 100%);
+}
+
+/* ============================================
+   ABOUT Section Background
+   - Grid pattern (pink horizontal/vertical lines)
+   ============================================ */
+
+.section-bg-color-about {
+  background: #0A0614;
+}
+
+.section-bg-pattern-about {
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 107, 157, 0.05) 40px, rgba(255, 107, 157, 0.05) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 107, 157, 0.05) 40px, rgba(255, 107, 157, 0.05) 41px);
+}
+
+/* ============================================
+   EXPERIENCE Section Background
+   - Radial gradients (green center, gold/pink accents)
+   - Mask for ellipse shape
+   - Animated scanlines (vertical and horizontal)
+   ============================================ */
+
+.section-bg-color-experience {
+  background: #0A0614;
+}
+
+.section-bg-gradient-experience {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(118, 255, 163, 0.25) 0%, rgba(118, 255, 163, 0.12) 30%, transparent 60%),
+    radial-gradient(circle at 30% 35%, rgba(254, 200, 77, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 70% 65%, rgba(255, 107, 157, 0.08) 0%, transparent 35%);
+}
+
+.section-bg-scanline-experience {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.15) 2px, rgba(0, 0, 0, 0.15) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px);
+  animation: crtEffect 8s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.section-bg-mask-experience {
+  background: radial-gradient(ellipse 150% 70% at 50% 50%, transparent 0%, transparent 30%, #0A0614 80%);
+}
+
+/* ============================================
+   PROJECTS Section Background
+   - Dark background
+   - Vertical scanline effect
+   ============================================ */
+
+.section-bg-color-projects {
+  background: #0A0614;
+}
+
+.section-bg-scanline-projects {
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px);
+  animation: scanVertical 4s linear infinite;
+  animation-delay: 2s;
+}
+
+/* ============================================
+   SKILLS Section Background
+   - Simple dark background
+   ============================================ */
+
+.section-bg-color-skills {
+  background: #0A0614;
+}
+
+/* ============================================
+   CONTACT Section Background
+   - Simple dark background
+   ============================================ */
+
+.section-bg-color-contact {
+  background: #0A0614;
+}
+
+.section-bg-pattern-contact {
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(118, 255, 163, 0.05) 40px, rgba(118, 255, 163, 0.05) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(118, 255, 163, 0.05) 40px, rgba(118, 255, 163, 0.05) 41px);
+}
+
+.section-bg-mask-contact {
+  background: radial-gradient(ellipse 120% 80% at 50% 70%, transparent 0%, transparent 60%, #0A0614 100%);
+}
+
+/* ============================================
+   DEFAULT Section Background
+   - Fallback dark background
+   ============================================ */
+
+.section-bg-color-default {
+  background: #0A0614;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes scanHorizontal {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes scanVertical {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes crtEffect {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
