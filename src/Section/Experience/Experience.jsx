@@ -12,20 +12,19 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <div className="relative">
-      <ExperienceBG />
       <section
         id="experience"
         ref={ref}
         className="min-h-screen flex flex-col items-center justify-center py-20 relative z-10"
       >
+      <ExperienceBG />
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-        <SectionTitle color='yellow-orange'>
+        <SectionTitle color='yellowOrange'>
             Experience
           </SectionTitle>
         </motion.div>
@@ -35,7 +34,6 @@ const Experience = () => {
         </CenteredContent>
       </Container>
     </section>
-    </div>
   )
 }
 

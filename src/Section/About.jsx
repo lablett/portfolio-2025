@@ -4,6 +4,7 @@ import CenteredContent from '@Components/CenteredContent'
 import Photo from '@Components/About/Photo'
 import Bio from '@Components/About/Bio'
 import Skills from '@Components/About/Skills'
+import { backgrounds } from '@constants/colors'
 
 const About = () => {
   const ref = useRef(null)
@@ -15,11 +16,7 @@ const About = () => {
       ref={ref}
       className="min-h-[80vh] flex items-center justify-center relative overflow-hidden"
       style={{
-        background: `
-          repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 107, 157, 0.015) 40px, rgba(255, 107, 157, 0.05) 41px),
-          repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 107, 157, 0.015) 40px, rgba(255, 107, 157, 0.05) 41px),
-          #0A0614
-        `
+        background: backgrounds.about,
       }}
     >
       <div className="max-w-6xl w-full px-10 py-32">

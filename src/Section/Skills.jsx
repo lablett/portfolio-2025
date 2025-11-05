@@ -28,7 +28,7 @@ const Skills = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <SectionTitle color="green-yellow">
+            <SectionTitle color="greenYellow">
               Tech Stack
             </SectionTitle>
           </motion.div>

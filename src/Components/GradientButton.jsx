@@ -1,17 +1,5 @@
 import { motion } from 'framer-motion'
-
-const gradientMap = {
-  'pink-yellow': {
-    gradient: "linear-gradient(135deg, #FF6B9D, #FEC84D)",
-    glowColor: "rgba(255, 107, 157, 0.5)",
-    glowColorHover: "rgba(255, 107, 157, 0.8)",
-  },
-  'green-purple': {
-    gradient: "linear-gradient(135deg, #76FFA3, #9D7CF5)",
-    glowColor: "rgba(118, 255, 163, 0.5)",
-    glowColorHover: "rgba(118, 255, 163, 0.8)",
-  },
-}
+import { buttonVariants } from '@constants/colors'
 
 const GradientButton = ({
   children,
@@ -24,7 +12,7 @@ const GradientButton = ({
   className = '',
   style = {},
 }) => {
-  const variantStyles = gradientMap[variant] || gradientMap['pink-yellow']
+  const variantStyles = buttonVariants[variant] || buttonVariants['pink-yellow']
   const finalGradient = gradient || variantStyles.gradient
   const finalGlowColor = glowColor || variantStyles.glowColor
   const finalGlowColorHover = glowColorHover || variantStyles.glowColorHover

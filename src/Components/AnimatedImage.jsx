@@ -1,12 +1,5 @@
 import { motion } from 'framer-motion'
-
-// Helper function to convert hex color to rgba
-const hexToRgba = (hex, alpha = 0.9) => {
-  const r = parseInt(hex.slice(1, 3), 16)
-  const g = parseInt(hex.slice(3, 5), 16)
-  const b = parseInt(hex.slice(5, 7), 16)
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`
-}
+import { backgroundGradients, colorWithAlpha } from '@constants/colors'
 
 const AnimatedImage = ({
   src,
@@ -16,8 +9,8 @@ const AnimatedImage = ({
   isInView = true,
   delay = 0.1,
 }) => {
-  const glowColor = hexToRgba(borderColor, 0.9)
-  const scanlineColor = hexToRgba(borderColor, 0.08)
+  const glowColor = colorWithAlpha(borderColor, 0.9)
+  const scanlineColor = colorWithAlpha(borderColor, 0.08)
 
   return (
     <motion.div
@@ -35,10 +28,10 @@ const AnimatedImage = ({
           className="aspect-square w-full max-w-sm border-4 flex items-center justify-center text-6xl overflow-hidden relative"
           style={{
             borderColor,
-            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+            background: backgroundGradients.imageCardBg,
             boxShadow: `
               0 0 80px ${glowColor},
-              inset 0 0 40px ${hexToRgba(borderColor, 0.15)}
+              inset 0 0 40px ${colorWithAlpha(borderColor, 0.15)}
             `
           }}
         >

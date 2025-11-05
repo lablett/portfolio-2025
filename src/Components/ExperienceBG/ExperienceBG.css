@@ -16,7 +16,7 @@
   -webkit-mask-image: radial-gradient(ellipse 150% 70% at 50% 50%, black 0%, black 30%, transparent 80%);
   mask-image: radial-gradient(ellipse 150% 70% at 50% 50%, black 0%, black 30%, transparent 80%);
   pointer-events: none;
-  z-index: 0;
+  z-index: -10;
 }
 
 .experience-bg::before {

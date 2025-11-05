@@ -1,10 +1,4 @@
-const gradientMap = {
-  'multi': 'linear-gradient(135deg, #FEC84D, #FF6B9D, #76FFA3)',
-  'yellow-orange': 'linear-gradient(135deg, #FEC84D, #FF6B9D)',
-  'purple-pink': 'linear-gradient(135deg, #9D7CF5, #FF6B9D, #FEC84D)',
-  'green-yellow': 'linear-gradient(135deg, #76FFA3, #FEC84D, #FF6B9D)',
-  'green-purple': 'linear-gradient(135deg, #76FFA3, #9D7CF5)',
-}
+import { gradients } from '@constants/colors'
 
 const sizeMap = {
   'small': {
@@ -31,7 +25,7 @@ const GradientHeading = ({
   className = '',
   as = 'h1',
 }) => {
-  const gradient = gradientMap[color] || gradientMap['multi']
+  const gradient = gradients[color] || gradients['multi']
   const sizeStyles = sizeMap[size] || sizeMap['large']
   const Element = as
 

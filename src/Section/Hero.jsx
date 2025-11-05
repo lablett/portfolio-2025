@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import GradientButton from '@Components/GradientButton'
 import Subtitle from '@Components/Subtitle'
+import { backgrounds, backgroundMasks, gridPattern } from '@constants/colors'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -12,12 +13,7 @@ const Hero = () => {
           id='hero'
           className='relative h-[120vh] flex items-center justify-center'
           style={{
-              background: `
-          radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.3) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(118, 255, 163, 0.3) 0%, transparent 50%),
-          radial-gradient(circle at 40% 40%, rgba(254, 200, 77, 0.3) 0%, transparent 50%),
-          #0b0614
-        `,
+              background: backgrounds.hero,
           }}
       >
           {/* Top/bottom fade overlay */}
@@ -28,9 +24,7 @@ const Hero = () => {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  background: `
-          linear-gradient(to bottom, #0b0614 0%, transparent 0%, transparent 83.33%, #0b0614 100%)
-        `,
+                  background: backgroundMasks.hero,
               }}
           />
           {/* Scanning line effect */}
@@ -52,10 +46,7 @@ const Hero = () => {
                   left: 0,
                   right: 0,
                   height: "120vh",
-                  backgroundImage: `
-            repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px),
-            repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 0.03) 40px, rgba(255, 255, 255, 0.03) 41px)
-          `,
+                  backgroundImage: gridPattern,
               }}
           />
 

@@ -1,11 +1,6 @@
-const gradientMap = {
-  'yellow-orange': 'linear-gradient(135deg, #FEC84D, #FF6B9D)',
-  'purple-pink': 'linear-gradient(135deg, #9D7CF5, #FF6B9D, #FEC84D)',
-  'green-yellow': 'linear-gradient(135deg, #76FFA3, #FEC84D, #FF6B9D)',
-  'green-purple': 'linear-gradient(135deg, #76FFA3, #9D7CF5)',
-}
+import { gradients } from '@constants/colors'
 
-export const SectionTitle = ({ children, color = 'pink-yellow' }) => {
+export const SectionTitle = ({ children, color = 'pinkYellow' }) => {
   return (
     <h2
       style={{
@@ -14,7 +9,7 @@ export const SectionTitle = ({ children, color = 'pink-yellow' }) => {
         textTransform: 'uppercase',
         letterSpacing: '-0.03em',
         marginBottom: '3rem',
-        background: gradientMap[color],
+        background: gradients[color],
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',

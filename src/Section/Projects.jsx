@@ -71,7 +71,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <SectionTitle color="purple-pink">
+          <SectionTitle color="purplePink">
             Work
           </SectionTitle>
         </motion.div>

@@ -67,7 +67,7 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <SectionTitle color="green-purple">
+          <SectionTitle color="greenPurple">
             Connect
           </SectionTitle>
         </motion.div>
@@ -111,7 +111,7 @@ const Contact = () => {
 
           {/* Download CV button */}
           <GradientButton
-            variant='green-purple'
+            variant='greenPurple'
             onClick={console.log('click!')}
             delay={0.4}
           >
