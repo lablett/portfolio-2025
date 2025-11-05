@@ -60,11 +60,13 @@ const Contact = () => {
     <section
       id="contact"
       ref={ref}
-      className="flex flex-col items-center justify-center py-10 px-6 relative overflow-hidden"
+      className="min-h-[80vh] flex flex-col items-center align-center py-20 relative overflow-hidden"
     >
       <SectionBackground type="contact" />
       <Container>
-        <motion.div
+        <CenteredContent>
+          <div className="max-w-4xl w-full relative z-10 flex flex-col items-center gap-18">
+                  <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
@@ -73,8 +75,6 @@ const Contact = () => {
             Get In Touch
           </SectionTitle>
         </motion.div>
-        <CenteredContent>
-          <div className="max-w-4xl w-full relative z-10 flex flex-col items-center gap-16">
 
           {/* Social links */}
           <motion.div
