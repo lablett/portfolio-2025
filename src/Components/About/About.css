@@ -1,0 +1,30 @@
+/* Skills Component Styles */
+.skills-label {
+  color: #FEC84D;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  padding: 10px 16px;
+  background: rgba(76, 255, 163, 0.1);
+  border: 2px solid #76FFA3;
+  color: #76FFA3;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 15px rgba(118, 255, 163, 0.3);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
