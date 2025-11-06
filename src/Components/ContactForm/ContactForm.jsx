@@ -88,7 +88,7 @@ const ContactForm = ({ isInView }) => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter your name"
+            placeholder="Your name"
             required
             disabled={isSubmitting}
           />
@@ -115,7 +115,7 @@ const ContactForm = ({ isInView }) => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Tell me about your project..."
+            placeholder="Your message"
             required
             disabled={isSubmitting}
           />

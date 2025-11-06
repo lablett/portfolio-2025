@@ -96,6 +96,10 @@
     repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 107, 157, 0.05) 40px, rgba(255, 107, 157, 0.1) 41px);
 }
 
+.section-bg-mask-about {
+  background: linear-gradient(to bottom, #0A0614 0%, transparent 20%, transparent 80%, #0A0614 100%);
+}
+
 /* ============================================
    EXPERIENCE Section Background
    - Radial gradients (green center, gold/pink accents)
@@ -112,6 +116,8 @@
     radial-gradient(circle at 50% 50%, rgba(118, 255, 163, 0.25) 0%, rgba(118, 255, 163, 0.12) 30%, transparent 60%),
     radial-gradient(circle at 30% 35%, rgba(254, 200, 77, 0.08) 0%, transparent 35%),
     radial-gradient(circle at 70% 65%, rgba(255, 107, 157, 0.08) 0%, transparent 35%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 
 .section-bg-scanline-experience {
@@ -125,7 +131,7 @@
 }
 
 .section-bg-mask-experience {
-  background: radial-gradient(ellipse 150% 70% at 50% 50%, transparent 0%, transparent 30%, #0A0614 80%);
+  background: radial-gradient(ellipse 100% 70% at 50% 50%, transparent 0%, transparent 30%, #0A0614 80%);
 }
 
 /* ============================================

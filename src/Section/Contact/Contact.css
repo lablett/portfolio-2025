@@ -1,8 +1,9 @@
 /* ============================================================
    NEON HOLOGRAM BUTTON STYLE
-   - Colour: Neon green with dual colour glows (green + purple)
-   - Scanlines: Medium intensity
-   - Animation: Pulsating glow (no flare rings)
+   - Colour: Hot pink with dual rotating rings (yellow inner, pink outer)
+   - Rings: Yellow inner ring (CW) + Pink outer ring (CCW)
+   - Scanlines: Green on inner circle
+   - Animation: Dual rotating rings + glow pulse
    - Size: 90px with 4xl icons
    ============================================================ */
 
@@ -22,29 +23,19 @@
   height: 90px;
   cursor: pointer;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(118, 255, 163, 0.12), rgba(157, 124, 245, 0.08));
-  color: #76FFA3;
-  border: 2px solid #76FFA3;
+  color: var(--color-neon-green);
+  border: 2px solid var(--color-hot-pink);
   box-shadow:
-    0 0 30px rgba(118, 255, 163, 1),
-    0 0 50px rgba(118, 255, 163, 0.6),
+    0 0 30px var(--color-hot-pink),
+    0 0 50px rgba(255, 107, 157, 0.6),
     0 0 60px rgba(157, 124, 245, 0.4),
-    inset 0 0 25px rgba(118, 255, 163, 0.3);
+    inset 0 0 25px rgba(255, 107, 157, 0.3);
   transition: all 0.3s ease;
   text-decoration: none;
   z-index: 1;
-  animation: glow-pulse 2s ease-in-out infinite;
-}
-
-/* Scanlines overlay - medium intensity */
-.neon-hologram-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
+  animation: glow-pulse 3s ease-in-out infinite;
+  font-size: inherit;
+  vertical-align: baseline;
   background: repeating-linear-gradient(
     0deg,
     rgba(118, 255, 163, 0.12) 0px,
@@ -52,45 +43,87 @@
     transparent 2px,
     transparent 5px
   );
+}
+
+/* Pink outer ring - rotating counter-clockwise */
+.neon-hologram-btn::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  border: 2px solid transparent;
+  border-bottom-color: var(--color-hot-pink);
+  border-left-color: var(--color-hot-pink);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: spin-ring-ccw 6s linear infinite;
   pointer-events: none;
-  z-index: 2;
+  z-index: 0;
+}
+
+/* Gold inner ring - rotating clockwise */
+.neon-hologram-btn::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1.5px solid transparent;
+  border-top-color: var(--color-gold);
+  border-right-color: var(--color-gold);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: spin-ring-cw 4s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes spin-ring-cw {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-ring-ccw {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
 }
 
 /* Pulsating glow animation */
 @keyframes glow-pulse {
   0%, 100% {
     box-shadow:
-      0 0 30px rgba(118, 255, 163, 1),
-      0 0 50px rgba(118, 255, 163, 0.6),
-      0 0 60px rgba(157, 124, 245, 0.4),
-      inset 0 0 25px rgba(118, 255, 163, 0.3);
+      0 0 30px var(--color-hot-pink),
+      0 0 50px rgba(255, 107, 157, 0.6),
+      inset 0 0 25px rgba(255, 107, 157, 0.3);
   }
   50% {
     box-shadow:
-      0 0 45px rgba(118, 255, 163, 1.1),
-      0 0 75px rgba(118, 255, 163, 0.7),
-      0 0 90px rgba(157, 124, 245, 0.5),
-      inset 0 0 35px rgba(118, 255, 163, 0.4);
+      0 0 40px rgba(255, 107, 157, 1),
+      0 0 65px rgba(255, 107, 157, 0.65),
+      inset 0 0 32px rgba(255, 107, 157, 0.38);
   }
 }
 
 /* Hover state - enhanced glow */
 .neon-hologram-btn:hover {
-  background: linear-gradient(135deg, rgba(118, 255, 163, 0.25), rgba(157, 124, 245, 0.15));
+  background: linear-gradient(135deg, rgba(118, 255, 163, 0.15), rgba(157, 124, 245, 0.15));
   box-shadow:
-    0 0 40px rgba(118, 255, 163, 0.95),
-    0 0 80px rgba(157, 124, 245, 0.6),
-    inset 0 0 30px rgba(118, 255, 163, 0.4);
+    0 0 40px rgba(255, 107, 157, 0.95),
+    0 0 80px var(--color-purple),
+    inset 0 0 30px rgba(255, 107, 157, 0.4);
   transform: scale(1.08);
 }
 
 /* Active state - press effect */
 .neon-hologram-btn:active {
-  background: linear-gradient(135deg, rgba(118, 255, 163, 0.3), rgba(157, 124, 245, 0.2));
+  background: linear-gradient(135deg, rgba(118, 255, 163, 0.2), rgba(157, 124, 245, 0.2));
   box-shadow:
-    0 0 50px rgba(118, 255, 163, 1),
-    0 0 100px rgba(157, 124, 245, 0.8),
-    inset 0 0 40px rgba(118, 255, 163, 0.5);
+    0 0 50px var(--color-hot-pink),
+    0 0 100px var(--color-purple),
+    inset 0 0 40px rgba(255, 107, 157, 0.5);
   transform: scale(0.95);
 }
 
@@ -98,19 +131,35 @@
 .neon-hologram-btn:focus {
   outline: none;
   box-shadow:
-    0 0 40px rgba(118, 255, 163, 0.95),
-    0 0 80px rgba(157, 124, 245, 0.6),
-    inset 0 0 30px rgba(118, 255, 163, 0.4);
+    0 0 40px rgba(255, 107, 157, 0.95),
+    0 0 80px var(--color-purple),
+    inset 0 0 30px rgba(255, 107, 157, 0.4);
 }
 
 /* Mobile touch state */
 @media (hover: none) and (pointer: coarse) {
   .neon-hologram-btn:active {
-    background: linear-gradient(135deg, rgba(118, 255, 163, 0.25), rgba(157, 124, 245, 0.15));
+    background: linear-gradient(135deg, rgba(118, 255, 163, 0.15), rgba(157, 124, 245, 0.15));
     box-shadow:
-      0 0 40px rgba(118, 255, 163, 0.95),
-      0 0 80px rgba(157, 124, 245, 0.6),
-      inset 0 0 30px rgba(118, 255, 163, 0.4);
+      0 0 40px rgba(255, 107, 157, 0.95),
+      0 0 80px var(--color-purple),
+      inset 0 0 30px rgba(255, 107, 157, 0.4);
     transform: scale(1.08);
   }
+}
+
+/* Social links container - add spacing from SectionTitle and ContactForm */
+.social-links-container {
+  margin-top: 48px !important;
+  margin-bottom: 48px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  align-content: center !important;
+  width: 100% !important;
+  max-width: 600px !important;
 }

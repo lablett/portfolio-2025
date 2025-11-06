@@ -3,9 +3,9 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import Container from '@Components/Container'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
-import GradientButton from '@Components/GradientButton'
 import './Contact.css'
 import CenteredContent from '@Components/CenteredContent'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
@@ -26,6 +26,11 @@ const Contact = () => {
       name: 'LinkedIn',
       icon: faLinkedin,
       url: 'https://linkedin.com/in/lucilleablett',
+    },
+    {
+      name: 'CV',
+      icon: faFileLines,
+      isCV: true,
     },
   ]
 
@@ -61,7 +66,7 @@ const Contact = () => {
       <SectionBackground type="contact" />
       <Container>
         <CenteredContent>
-          <div className="max-w-4xl w-full relative z-10 flex flex-col items-center gap-18">
+          <div className="w-full relative z-10 flex flex-col items-center align-gap-18">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -76,29 +81,43 @@ const Contact = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-32"
+            className="flex flex-row flex-wrap justify-center items-center gap-8 md:gap-32 social-links-container"
           >
             {socials.map((social) => (
               <motion.div
                 key={social.name}
                 variants={itemVariants}
+                className="flex flex-col items-center"
               >
                 <div className="neon-hologram-wrapper">
-                  <a
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="neon-hologram-btn"
-                    title={social.name}
-                  >
-                    <FontAwesomeIcon
-                      icon={social.icon}
-                      className="text-4xl"
-                    />
-                  </a>
+                  {social.isCV ? (
+                    <button
+                      onClick={downloadCV}
+                      className="neon-hologram-btn"
+                      title={social.name}
+                    >
+                      <FontAwesomeIcon
+                        icon={social.icon}
+                        className="text-4xl"
+                      />
+                    </button>
+                  ) : (
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="neon-hologram-btn"
+                      title={social.name}
+                    >
+                      <FontAwesomeIcon
+                        icon={social.icon}
+                        className="text-4xl"
+                      />
+                    </a>
+                  )}
                 </div>
                 <div className="text-center" style={{ marginTop: '24px' }}>
-                  <Subtitle as='h3'>
+                  <Subtitle as='h3' color='neonGreen'>
                     {social.name}
                   </Subtitle>
                 </div>
@@ -108,15 +127,6 @@ const Contact = () => {
 
           {/* Contact Form */}
           <ContactForm isInView={isInView} />
-
-          {/* Download CV button */}
-          <GradientButton
-            variant='greenPurple'
-            onClick={downloadCV}
-            delay={0.4}
-          >
-            Download CV
-          </GradientButton>
           </div>
         </CenteredContent>
       </Container>
