@@ -3,7 +3,6 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Container from '@Components/Container'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import GradientButton from '@Components/GradientButton'
@@ -17,7 +16,6 @@ import ContactForm from '@Components/ContactForm/ContactForm'
 const Contact = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-
   const socials = [
     {
       name: 'GitHub',
@@ -28,11 +26,6 @@ const Contact = () => {
       name: 'LinkedIn',
       icon: faLinkedin,
       url: 'https://linkedin.com/in/lucilleablett',
-    },
-    {
-      name: 'Email',
-      icon: faEnvelope,
-      url: 'mailto:your.email@example.com',
     },
   ]
 
