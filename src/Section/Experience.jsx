@@ -1,6 +1,5 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import './Experience.css'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import CenteredContent from '@Components/CenteredContent'
 import ExperienceTimeline from '@Components/ExperienceTimeline/ExperienceTimeline'
@@ -15,7 +14,7 @@ const Experience = () => {
       <section
         id="experience"
         ref={ref}
-        className="min-h-[80vh] flex flex-col items-center justify-center py-10 relative overflow-hidden"
+        className="flex flex-col items-center justify-center relative overflow-hidden"
       >
       <SectionBackground type="experience" />
       <Container>
@@ -24,7 +23,7 @@ const Experience = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-        <SectionTitle color='justGreen'>
+        <SectionTitle as='h2' color='justGreen'>
             Experience
           </SectionTitle>
         </motion.div>

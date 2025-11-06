@@ -4,37 +4,11 @@
 }
 
 .section-title {
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0em;
   margin-bottom: 3rem;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: #0A0614;
-  padding: calc(0.12em / 2);
-  -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: 0.12em;
-  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   display: inline-block;
-  filter: drop-shadow(0 0 8px rgba(118, 255, 163, 0.3)) drop-shadow(0 0 12px rgba(157, 124, 245, 0.2));
-}
-
-/* Scanlines overlay - appears in the glow */
-.section-title::after {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.03) 0px,
-    rgba(0, 0, 0, 0.03) 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  pointer-events: none;
-  z-index: -1;
+  position: relative;
 }
