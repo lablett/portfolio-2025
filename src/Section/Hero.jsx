@@ -58,7 +58,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Subtitle color="green" className='text-2xl' style={{ textShadow: "0 0 20px rgba(118, 255, 163, 0.5)", marginBottom: "3rem" }}>
+              <Subtitle as='h2' color="green" className='text-6xl' style={{ marginBottom: "3rem" }}>
                 Software Engineer
               </Subtitle>
             </motion.div>

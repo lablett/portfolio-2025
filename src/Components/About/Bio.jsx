@@ -17,7 +17,7 @@ const Bio = ({ isInView }) => {
         <GradientHeading size="medium" color="multi">
           {bioData.name}
         </GradientHeading>
-        <Subtitle color="green">
+        <Subtitle color="green" style={{fontSize: '24px', lineHeight: '0.9', marginBottom: '18px'}}>
           {bioData.title}
         </Subtitle>
       </div>

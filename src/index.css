@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+
 /* CSS Variables - Single source of truth for colors */
 :root {
   /* Vibrant Rave Energy Palette (from src/constants/colors.js) */
@@ -11,9 +14,9 @@
   --color-light-text: #FFFFFF;
 
   /* Typography */
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family:  system-ui, Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 400;
+  font-style: normal;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -39,6 +42,21 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+
+h2 {
+  font-family: "Aldrich", system-ui, Arial, sans-serif;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: "Aldrich", system-ui, Arial, sans-serif;
+}
+
+button {
+  font-family: "Aldrich", system-ui, Arial, sans-serif;
+  letter-spacing: 0.08em;
 }
 
 /* Custom scrollbar */

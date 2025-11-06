@@ -10,6 +10,7 @@ import GradientButton from '@Components/GradientButton'
 import './Contact.css'
 import CenteredContent from '@Components/CenteredContent'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
+import Subtitle from '@/Components/Subtitle'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -81,7 +82,7 @@ const Contact = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="flex flex-wrap justify-center gap-32"
+            className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-32"
           >
             {socials.map((social) => (
               <motion.div
@@ -102,8 +103,10 @@ const Contact = () => {
                     />
                   </a>
                 </div>
-                <div className="text-xs font-semibold text-light-text uppercase tracking-wider text-center mt-3">
-                  {social.name}
+                <div className="text-center" style={{ marginTop: '24px' }}>
+                  <Subtitle as='h3'>
+                    {social.name}
+                  </Subtitle>
                 </div>
               </motion.div>
             ))}

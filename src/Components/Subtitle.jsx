@@ -9,17 +9,18 @@ const Subtitle = ({
   children,
   color = 'green',
   className = '',
+  as = 'h2',
   style = {},
 }) => {
   const textColor = colorMap[color] || colorMap['green']
+  const Element = as
 
   return (
-    <h2
+    <Element
       className={`subtitle ${className}`}
       style={{
         color: textColor,
-        fontSize: '1.1rem',
-        fontWeight: 700,
+        textShadow: "0 0 20px rgba(118, 255, 163, 0.5)",
         textTransform: 'uppercase',
         letterSpacing: '0.15em',
         marginBottom: '30px',
@@ -27,7 +28,7 @@ const Subtitle = ({
       }}
     >
       {children}
-    </h2>
+    </Element>
   )
 }
 

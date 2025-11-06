@@ -1,13 +1,4 @@
 /* Skills Component Styles */
-.skills-label {
-  color: #FEC84D;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 15px;
-}
-
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -15,16 +6,24 @@
 }
 
 .skill-tag {
+  font-family: "Aldrich", system-ui, Arial, sans-serif;
   padding: 10px 16px;
-  background: rgba(76, 255, 163, 0.1);
-  border: 2px solid #76FFA3;
-  color: #76FFA3;
+  background: rgba(254, 200, 77, 0.1);
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  box-shadow: 0 0 15px rgba(118, 255, 163, 0.3);
+  box-shadow: 0 0 10px rgba(254, 200, 77, 0.8);
   cursor: pointer;
   border-radius: 0.25rem;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  margin: 0;
+  display: inline-block;
+}
+
+.skill-tag:hover {
+  box-shadow: 0 0 30px var(--color-gold);
+  scale: 1.05;
 }

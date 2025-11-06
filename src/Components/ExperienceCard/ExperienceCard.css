@@ -3,6 +3,7 @@
 
 /* CARD STYLING - NARROW, LEFT-ALIGNED */
 .experience-card {
+  font-family: "Aldrich", system-ui, Arial, sans-serif;
   position: relative;
   width: 200px;
   height: 120px;

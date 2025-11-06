@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { buttonVariants } from '@constants/colors'
+import { colors, buttonVariants } from '@constants/colors'
 
 const GradientButton = ({
   children,
@@ -24,15 +24,15 @@ const GradientButton = ({
     >
       <button
         onClick={onClick}
-        className={`inline-block font-black uppercase border-4 transition-all duration-300 hover:scale-105 ${className}`}
+        className={`inline-block uppercase border-4 transition-all duration-300 hover:scale-105 ${className}`}
         style={{
           padding: "0.875rem 2.5rem",
           fontSize: "0.875rem",
-          letterSpacing: "0.1em",
           background: finalGradient,
           color: "#1a1a1a",
           borderColor: "#1a1a1a",
           boxShadow: `0 0 40px ${finalGlowColor}`,
+          textShadow: `0 0 1.1px ${colors.darkText}`,
           ...style,
         }}
         onMouseEnter={(e) => {

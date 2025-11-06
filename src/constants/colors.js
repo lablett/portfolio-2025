@@ -5,6 +5,7 @@ export const colors = {
   gold: '#FEC84D',
   purple: '#9D7CF5',
   darkBg: '#0A0614',
+  darkText: '#1a1a1a',
 }
 
 // Helper function to convert hex to rgba
