@@ -11,6 +11,7 @@ import './Contact.css'
 import CenteredContent from '@Components/CenteredContent'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
 import Subtitle from '@/Components/Subtitle'
+import { downloadCV } from '@/utils/downloadHandler'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -114,7 +115,7 @@ const Contact = () => {
           {/* Download CV button */}
           <GradientButton
             variant='greenPurple'
-            onClick={console.log('click!')}
+            onClick={downloadCV}
             delay={0.4}
           >
             Download CV
