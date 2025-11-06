@@ -5,7 +5,7 @@ import { animationDelays } from '@constants/animations'
 const Photo = ({ isInView }) => {
   return (
     <AnimatedImage
-      src="/src/assets/profile-photo-transparent.png"
+      src="/src/assets/green.png"
       alt="Profile"
       borderColor={colors.hotPink}
       isInView={isInView}

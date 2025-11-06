@@ -58,12 +58,6 @@ export const backgroundMasks = {
   hero: `linear-gradient(to bottom, ${colors.darkBg} 0%, transparent 0%, transparent 83.33%, ${colors.darkBg} 100%)`,
 }
 
-// Complex background gradients
-export const backgroundGradients = {
-  // Image card background
-  imageCardBg: `linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)`,
-}
-
 export const backgrounds = {
   hero: `
     radial-gradient(circle at 20% 80%, ${colorWithAlpha(colors.hotPink, 0.3)} 0%, transparent 50%),

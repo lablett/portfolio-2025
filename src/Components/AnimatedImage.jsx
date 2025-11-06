@@ -28,7 +28,7 @@ const AnimatedImage = ({
           className="aspect-square w-full max-w-sm border-4 flex items-center justify-center text-6xl overflow-hidden relative"
           style={{
             borderColor,
-            background: backgroundGradients.imageCardBg,
+            background: backgroundGradients.justGreen,
             boxShadow: `
               0 0 80px ${glowColor},
               inset 0 0 40px ${colorWithAlpha(borderColor, 0.15)}
@@ -46,6 +46,7 @@ const AnimatedImage = ({
             src={src}
             alt={alt}
             className="aspect-square object-cover w-full h-full relative z-10"
+            style={{ objectPosition: '0% 30%' }}
           />
         </div>
       </motion.div>
