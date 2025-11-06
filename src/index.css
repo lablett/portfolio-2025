@@ -74,15 +74,6 @@
     background: linear-gradient(180deg, var(--color-gold), var(--color-neon-green));
   }
 
-  /* Party mode styles - will be toggled with JS */
-  body.party-mode {
-    animation: gradient-shift 3s ease infinite;
-  }
-
-  body.party-mode * {
-    animation-duration: 0.5s !important;
-  }
-
   @keyframes gradient-shift {
     0%, 100% {
       background-position: 0% 50%;
