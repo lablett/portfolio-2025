@@ -12,6 +12,7 @@ import CenteredContent from '@Components/CenteredContent'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
 import Subtitle from '@/Components/Subtitle'
 import { downloadCV } from '@/utils/downloadHandler'
+import ContactForm from '@Components/ContactForm/ContactForm'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -111,6 +112,9 @@ const Contact = () => {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Contact Form */}
+          <ContactForm isInView={isInView} />
 
           {/* Download CV button */}
           <GradientButton
