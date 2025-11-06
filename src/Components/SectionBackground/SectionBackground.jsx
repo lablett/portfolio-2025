@@ -16,7 +16,7 @@ import BackgroundMask from './BackgroundMask'
  *
  * @param {string} type - Background type: 'hero', 'about', 'experience', 'projects', 'contact', 'skills'
  */
-const SectionBackground = ({ type = 'default' }) => (
+const SectionBackground = ({ type }) => (
   <div className="section-bg">
     <BackgroundColor type={type} />
     <BackgroundGradient type={type} />

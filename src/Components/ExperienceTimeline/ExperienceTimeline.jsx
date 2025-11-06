@@ -52,7 +52,7 @@ const ExperienceTimeline = () => {
       <div className="experience-items flex flex-row max-sm:flex-col">
         {experiences.map((exp, index) => (
           <ExperienceCard
-            key={index}
+            key={exp.year}
             year={exp.year}
             title={exp.title}
             company={exp.company}

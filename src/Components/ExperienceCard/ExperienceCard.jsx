@@ -15,7 +15,6 @@ const ExperienceCard = ({
   location,
   color = 'neon-green',
   index = 0,
-  delay = 0,
 }) => {
   const borderColor = colorMap[color] || colorMap['neon-green']
 
@@ -26,7 +25,7 @@ const ExperienceCard = ({
       y: 0,
       transition: {
         duration: 0.6,
-        delay: delay + index * 0.1,
+        delay: index * 0.1,
       },
     },
   }
