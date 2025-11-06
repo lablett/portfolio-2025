@@ -1,132 +1,127 @@
-@import "tailwindcss";
+  @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
-
-
-/* CSS Variables - Single source of truth for colors */
-:root {
-  /* Vibrant Rave Energy Palette (from src/constants/colors.js) */
-  --color-hot-pink: #FF6B9D;
-  --color-gold: #FEC84D;
-  --color-neon-green: #76FFA3;
-  --color-purple: #9D7CF5;
-  --color-dark-bg: #0A0614;
-  --color-light-text: #FFFFFF;
-
-  /* Typography */
-  font-family:  system-ui, Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: var(--color-dark-bg);
-  color: var(--color-light-text);
-  overflow-x: hidden;
-  position: relative;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 
 
-h2 {
-  font-family: "Aldrich", system-ui, Arial, sans-serif;
-  font-size: 32px;
-}
+  /* CSS Variables - Single source of truth for colors */
+  :root {
+    /* Vibrant Rave Energy Palette (from src/constants/colors.js) */
+    --color-hot-pink: #FF6B9D;
+    --color-gold: #FEC84D;
+    --color-neon-green: #76FFA3;
+    --color-purple: #9D7CF5;
+    --color-dark-bg: #0A0614;
+    --color-light-text: #F0F0F0;
 
-h3 {
-  font-family: "Aldrich", system-ui, Arial, sans-serif;
-}
+    /* Typography */
+    font-family:  Aldrich, Verdana, system-ui, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
-button {
-  font-family: "Aldrich", system-ui, Arial, sans-serif;
-  letter-spacing: 0.08em;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1A1A1A;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--color-hot-pink), var(--color-purple));
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--color-gold), var(--color-neon-green));
-}
-
-/* Party mode styles - will be toggled with JS */
-body.party-mode {
-  animation: gradient-shift 3s ease infinite;
-}
-
-body.party-mode * {
-  animation-duration: 0.5s !important;
-}
-
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-}
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  50% {
-    transform: translateY(-20px);
-  }
-}
 
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    overflow-x: hidden;
+    position: relative;
   }
-  50% {
-    box-shadow: 0 0 40px rgba(157, 124, 245, 0.8);
-  }
-}
 
-@keyframes scanHorizontal {
-  0% {
-    top: -100%;
+  html {
+    scroll-behavior: smooth;
   }
-  100% {
-    top: 100%;
-  }
-}
 
-@keyframes scanVertical {
-  0% {
-    left: -100%;
+
+  h2 {
+    font-size: 32px;
   }
-  100% {
-    left: 100%;
+
+  button {
+    font-family: "Aldrich", system-ui, Arial, sans-serif;
+    letter-spacing: 0.08em;
   }
-}
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1A1A1A;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-hot-pink), var(--color-purple));
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--color-gold), var(--color-neon-green));
+  }
+
+  /* Party mode styles - will be toggled with JS */
+  body.party-mode {
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  body.party-mode * {
+    animation-duration: 0.5s !important;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(157, 124, 245, 0.8);
+    }
+  }
+
+  @keyframes scanHorizontal {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+
+  @keyframes scanVertical {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }

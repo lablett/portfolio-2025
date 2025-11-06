@@ -82,7 +82,7 @@
   font-size: 0.80rem;
   font-weight: 700;
   letter-spacing: 0.1px;
-  opacity: 0.70;
+  opacity: 0.80;
 }
 
 .experience-location {
@@ -90,7 +90,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  opacity: 0.70;
+  opacity: 0.80;
   margin-top: auto;
   align-self: flex-start;
 }

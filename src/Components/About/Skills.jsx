@@ -4,7 +4,7 @@ import { animationDelays, transitionDuration } from '@constants/animations'
 import './About.css'
 import Subtitle from '../Subtitle'
 
-const skillsList = ['React', 'JavaScript', 'TypeScript', 'iOS', 'Android', 'Ruby', 'Python', 'PostgreSQL', 'Git', 'GitHub', 'HTML', 'CSS', 'Docker']
+const skillsList = ['React', 'JavaScript', 'TypeScript', 'Ruby', 'Python', 'HTML', 'CSS', 'SQL', 'iOS', 'Android',  'Git', 'GitHub', 'Docker']
 
 const Skills = ({ isInView }) => {
   return (

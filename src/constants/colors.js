@@ -6,6 +6,7 @@ export const colors = {
   purple: '#9D7CF5',
   darkBg: '#0A0614',
   darkText: '#1a1a1a',
+  lightText: '#F0F0F0',
 }
 
 // Helper function to convert hex to rgba
