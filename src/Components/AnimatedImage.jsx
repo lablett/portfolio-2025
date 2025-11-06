@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { backgroundGradients, colorWithAlpha } from '@constants/colors'
+import { colorWithAlpha } from '@constants/colors'
 
 const AnimatedImage = ({
   src,
@@ -28,7 +28,6 @@ const AnimatedImage = ({
           className="aspect-square w-full max-w-sm border-4 flex items-center justify-center text-6xl overflow-hidden relative"
           style={{
             borderColor,
-            background: backgroundGradients.justGreen,
             boxShadow: `
               0 0 80px ${glowColor},
               inset 0 0 40px ${colorWithAlpha(borderColor, 0.15)}
