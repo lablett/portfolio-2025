@@ -7,11 +7,11 @@
 
 .skill-tag {
   font-family: "Aldrich", system-ui, Arial, sans-serif;
-  padding: 10px 16px;
+  padding: 7px 12px;
   background: rgba(254, 200, 77, 0.1);
   border: 2px solid var(--color-gold);
   color: var(--color-gold);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.08em;
