@@ -20,8 +20,8 @@ const About = () => {
     >
       <SectionBackground type="about" />
       <Container>
-        <div className="max-w-6xl w-full px-10 py-32">
-          <CenteredContent className="grid md:grid-cols-2 gap-32 items-center relative z-10">
+        <div className="max-w-7xl w-full px-10 py-32">
+          <CenteredContent className="grid md:grid-cols-2 gap-24 items-center relative z-10">
             <Photo isInView={isInView} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <Bio isInView={isInView} />

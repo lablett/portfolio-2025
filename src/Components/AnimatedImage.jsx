@@ -25,7 +25,7 @@ const AnimatedImage = ({
         className="relative"
       >
         <div
-          className="aspect-square w-full max-w-sm border-4 flex items-center justify-center text-6xl overflow-hidden relative"
+          className="aspect-square w-full max-w-md border-4 flex items-center justify-center text-6xl overflow-hidden relative"
           style={{
             borderColor,
             boxShadow: `
