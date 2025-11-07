@@ -75,7 +75,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <SectionTitle color="justGreen">
-              Get In Touch
+              Connect
             </SectionTitle>
           </motion.div>
           {/* Social links */}
