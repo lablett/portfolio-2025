@@ -12,20 +12,22 @@ import SectionBackground from '@Components/SectionBackground/SectionBackground'
 import Subtitle from '@/Components/Subtitle'
 import { downloadCV } from '@/utils/downloadHandler'
 import ContactForm from '@Components/ContactForm/ContactForm'
+import { SOCIAL_LINKS } from '@constants/socials'
+import { intersectionObserverMargin } from '@constants/navigation'
 
 const Contact = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: intersectionObserverMargin })
   const socials = [
     {
       name: 'GitHub',
       icon: faGithub,
-      url: 'https://github.com/lablett',
+      url: import.meta.env.VITE_GITHUB_URL,
     },
     {
       name: 'LinkedIn',
       icon: faLinkedin,
-      url: 'https://linkedin.com/in/lucilleablett',
+      url: import.meta.env.VITE_LINKEDIN_URL,
     },
     {
       name: 'CV',

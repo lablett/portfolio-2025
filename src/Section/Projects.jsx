@@ -6,28 +6,14 @@ import CenteredContent from '@Components/CenteredContent'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import GradientHeading from '@Components/GradientHeading'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
+import { projects as projectsData } from '@/data/projects'
+import { intersectionObserverMargin } from '@constants/navigation'
 
 const Projects = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: intersectionObserverMargin })
 
-  const projects = [
-    {
-      title: 'Project One',
-      techStack: ['React', 'TypeScript', 'Python'],
-      borderColor: 'pink',
-    },
-    {
-      title: 'Project Two',
-      techStack: ['React Native', 'Ruby', 'Git'],
-      borderColor: 'green',
-    },
-    {
-      title: 'Project Three',
-      techStack: ['React', 'Python', 'CSS'],
-      borderColor: 'yellow',
-    },
-  ]
+  const projects = projectsData
 
   const containerVariants = {
     hidden: { opacity: 0 },

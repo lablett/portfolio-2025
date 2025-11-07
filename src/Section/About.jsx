@@ -6,10 +6,11 @@ import Bio from '@Components/About/Bio'
 import Skills from '@Components/About/Skills'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
 import Container from '@/Components/Container'
+import { intersectionObserverMargin } from '@constants/navigation'
 
 const About = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: intersectionObserverMargin })
 
   return (
     <section

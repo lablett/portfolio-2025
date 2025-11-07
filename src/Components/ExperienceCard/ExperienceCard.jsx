@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { intersectionObserverMargin } from '@constants/navigation'
 import './ExperienceCard.css'
 
 const colorMap = {
@@ -36,7 +37,7 @@ const ExperienceCard = ({
       variants={itemVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: intersectionObserverMargin }}
     >
       <div
         className="experience-year"

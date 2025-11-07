@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { formLabels, formPlaceholders, formButtons, formStatus, formNote, consoleMessages } from '@constants/messages'
+import { formMessageTimeout } from '@constants/timing'
 import './ContactForm.css'
 
 const ContactForm = ({ isInView }) => {
@@ -26,7 +28,7 @@ const ContactForm = ({ isInView }) => {
 
     // Check honeypot field
     if (formData.website) {
-      console.log('Bot detected')
+      console.log(consoleMessages.botDetected)
       return
     }
 
@@ -34,7 +36,7 @@ const ContactForm = ({ isInView }) => {
 
     try {
       // Send to FormSubmit
-      const response = await fetch('https://formsubmit.co/lucille@lucilleablett.co.uk', {
+      const response = await fetch(import.meta.env.VITE_FORM_SUBMIT_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,15 +58,15 @@ const ContactForm = ({ isInView }) => {
           website: '',
         })
 
-        // Reset success message after 5 seconds
-        setTimeout(() => setSubmitStatus(null), 5000)
+        // Reset success message after timeout
+        setTimeout(() => setSubmitStatus(null), formMessageTimeout)
       } else {
         throw new Error('Form submission failed')
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      console.error(consoleMessages.formError, error)
       setSubmitStatus('error')
-      setTimeout(() => setSubmitStatus(null), 5000)
+      setTimeout(() => setSubmitStatus(null), formMessageTimeout)
     } finally {
       setIsSubmitting(false)
     }
@@ -81,41 +83,41 @@ const ContactForm = ({ isInView }) => {
         <h2 className="contact-form-title">SEND A MESSAGE</h2>
 
         <div className="form-group">
-          <label htmlFor="name">YOUR NAME</label>
+          <label htmlFor="name">{formLabels.name}</label>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Your name"
+            placeholder={formPlaceholders.name}
             required
             disabled={isSubmitting}
           />
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">YOUR EMAIL</label>
+          <label htmlFor="email">{formLabels.email}</label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="your@email.com"
+            placeholder={formPlaceholders.email}
             required
             disabled={isSubmitting}
           />
         </div>
 
         <div className="form-group">
-          <label htmlFor="message">MESSAGE</label>
+          <label htmlFor="message">{formLabels.message}</label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Your message"
+            placeholder={formPlaceholders.message}
             required
             disabled={isSubmitting}
           />
@@ -148,22 +150,22 @@ const ContactForm = ({ isInView }) => {
           className="submit-btn"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
+          {isSubmitting ? formButtons.sending : formButtons.send}
         </button>
 
         <p className="form-note">
-          Your email is protected • Bot prevention enabled
+          {formNote}
         </p>
 
         {submitStatus === 'success' && (
           <div className="status-message success">
-            ✓ Message sent! I'll get back to you soon.
+            ✓ {formStatus.success}
           </div>
         )}
 
         {submitStatus === 'error' && (
           <div className="status-message error">
-            ✗ Error sending message. Please try again.
+            ✗ {formStatus.error}
           </div>
         )}
       </form>

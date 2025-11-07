@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
 import { colors } from '@constants/colors'
 import { animationDelays, transitionDuration } from '@constants/animations'
+import { skillsNames } from '@constants/skills'
 import './About.css'
 import Subtitle from '../Subtitle'
 
-const skillsList = ['React', 'JavaScript', 'TypeScript', 'Ruby', 'Python', 'HTML', 'CSS', 'SQL', 'iOS', 'Android',  'Git', 'GitHub', 'Docker']
+const skillsList = skillsNames
 
 const Skills = ({ isInView }) => {
   return (

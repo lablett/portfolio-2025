@@ -6,10 +6,11 @@ import CenteredContent from '@Components/CenteredContent'
 import SectionTitle from '@Components/SectionTitle/SectionTitle'
 import SkillsList from '@Components/SkillsList'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
+import { intersectionObserverMargin } from '@constants/navigation'
 
 const Skills = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: intersectionObserverMargin })
 
   return (
     <section

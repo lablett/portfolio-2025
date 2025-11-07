@@ -5,10 +5,11 @@ import CenteredContent from '@Components/CenteredContent'
 import ExperienceTimeline from '@Components/ExperienceTimeline/ExperienceTimeline'
 import Container from '@Components/Container'
 import SectionBackground from '@Components/SectionBackground/SectionBackground'
+import { intersectionObserverMargin } from '@constants/navigation'
 
 const Experience = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: intersectionObserverMargin })
 
   return (
       <section

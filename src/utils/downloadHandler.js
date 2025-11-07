@@ -1,3 +1,5 @@
+import { cvFile } from '@constants/fileConfig'
+
 /**
  * Downloads a file from the given URL
  * @param {string} url - The URL or path to the file to download
@@ -20,8 +22,5 @@ export const downloadFile = (url, filename) => {
  * Downloads the user's CV
  */
 export const downloadCV = () => {
-  const CV_PATH = '/cv.pdf'
-  const CV_FILENAME = 'Lucille-Ablett-CV.pdf'
-
-  downloadFile(CV_PATH, CV_FILENAME)
+  downloadFile(cvFile.path, cvFile.filename)
 }
