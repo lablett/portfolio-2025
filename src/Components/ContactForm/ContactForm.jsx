@@ -33,10 +33,11 @@ const ContactForm = ({ isInView }) => {
     }
 
     setIsSubmitting(true)
+    const submitUrl = import.meta.env.VITE_FORM_SUBMIT_URL
 
     try {
-      // Send to FormSubmit
-      const response = await fetch(import.meta.env.VITE_FORM_SUBMIT_URL, {
+      console.log('Sending form to:', submitUrl)
+      const response = await fetch(submitUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +50,10 @@ const ContactForm = ({ isInView }) => {
         }),
       })
 
-      if (response.ok) {
+      console.log('Response status:', response.status)
+      console.log('Response headers:', response.headers)
+
+      if (response.ok || response.status === 200) {
         setSubmitStatus('success')
         setFormData({
           name: '',
@@ -61,10 +65,11 @@ const ContactForm = ({ isInView }) => {
         // Reset success message after timeout
         setTimeout(() => setSubmitStatus(null), formMessageTimeout)
       } else {
-        throw new Error('Form submission failed')
+        throw new Error(`Form submission failed with status ${response.status}`)
       }
     } catch (error) {
       console.error(consoleMessages.formError, error)
+      console.error('Full error:', error)
       setSubmitStatus('error')
       setTimeout(() => setSubmitStatus(null), formMessageTimeout)
     } finally {
